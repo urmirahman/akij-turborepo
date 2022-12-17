@@ -17,5 +17,6 @@
     "noUncheckedIndexedAccess": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
+  "types": ["cypress", "cypress-axe", "node"],
   "exclude": ["node_modules"]
 }
