@@ -2,12 +2,12 @@ name: "server"
 
 on:
   push:
-    branches: [main, turbo-repo-branch]
+    branches: [main, develop]
     paths:
       - "apps/server/**"
       - ".github/workflow/server.yaml"
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   build:

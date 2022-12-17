@@ -2,9 +2,9 @@ name: root
 
 on:
   push:
-    branches: [main, turbo-repo-branch]
+    branches: [main, develop]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   build:
