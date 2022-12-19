@@ -19,6 +19,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.2.4",
+    "commitizen": "^4.2.6",
+    "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.16.7",
     "esbuild-jest": "^0.5.0",
     "eslint-config-custom": "*",
@@ -33,5 +35,13 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "npm@8.15.0"
+  "packageManager": "npm@8.15.0",
+  "dependencies": {
+    "eslint-plugin-cypress": "^2.12.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

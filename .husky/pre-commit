@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run test && npx lint-staged
+echo "Word? ও আমার বন্ধু গো, চির সাথী পথ চলার, মনজিল Phaarki???"
+exit 1
+#npm run test && npx lint-staged
