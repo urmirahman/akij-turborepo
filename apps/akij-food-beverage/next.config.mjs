@@ -15,6 +15,11 @@ const config = {
   },
   experimental: {
     transpilePackages: ["ui"],
+  },
+  images: {
+    domains: [
+      "link.fobshanghai.com"
+    ]
   }
 };
 export default config;
