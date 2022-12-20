@@ -9,4 +9,9 @@ describe("akij-foods-branch-test test", () => {
     expect(screen.getByRole("button")).toBeInTheDocument();
     expect(screen.getByText("akij-foods-branch-test")).toBeInTheDocument();
   });
+
+  it("sees akij-foods-branch-input-test", () => {
+    render(<HellowAkij />);
+    expect(screen.getByPlaceholderText("akij-input")).toBeInTheDocument();
+  });
 });

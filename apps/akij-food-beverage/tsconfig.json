@@ -17,6 +17,6 @@
     "noUncheckedIndexedAccess": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
-  "types": ["cypress", "cypress-axe", "node"],
+  "types": ["cypress", "cypress-axe", "node", "@testing-library/jest-dom", "jest"],
   "exclude": ["node_modules"]
 }
