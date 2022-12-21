@@ -10,7 +10,9 @@
     "start": "next start",
     "test": "jest --coverage",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --component"
+    "cy:run": "cypress run --component",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.5",
@@ -30,6 +32,17 @@
     "zod": "^3.18.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/cli": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
@@ -37,10 +50,12 @@
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.3.0",
     "cypress": "^12.1.0",
     "cypress-axe": "^1.2.0",
     "eslint": "^8.26.0",
     "eslint-config-next": "13.0.2",
+    "eslint-plugin-storybook": "^0.6.8",
     "next-transpile-modules": "^10.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",

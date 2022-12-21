@@ -5,8 +5,8 @@ export default function HellowAkij() {
   return (
     <div>
       <p>akij-foods-branch-test</p>
-      <Button />
       <Input />
+      <Button variant={"primary"}>{"Akij button"}</Button>
     </div>
   );
 }

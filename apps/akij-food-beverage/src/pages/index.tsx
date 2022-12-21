@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Button } from "ui/components/Buttons";
+import { FaBeer } from "react-icons/fa";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,9 @@ const Home: NextPage = () => {
             width={400}
             height={400}
           />
-          <Button />
+          <Button variant={"primary"}>
+            <FaBeer />
+          </Button>
         </div>
       </main>
     </>
