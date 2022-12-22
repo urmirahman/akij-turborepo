@@ -1,3 +1,9 @@
+import { css, SerializedStyles } from '@emotion/react'
+import type { Breakpoint as MuiBreakpoint, ThemeOptions as MuiThemeOptions } from '@mui/material/styles'
+import { Theme } from '../theming'
+
+export type Breakpoint = MuiBreakpoint
+
 export const breakpoints = {
     values: {
         xs: 0,
@@ -7,6 +13,8 @@ export const breakpoints = {
         xl: 1440,
     },
 }
+export const orderedBreakpoints = ['xs', 'sm', 'md', 'lg', 'xl'] as const
+export const smallestBreakpoint = orderedBreakpoints[0]
 
 export type BreakpointSpecific<T4ColumnGrid = unknown, T12ColumnGrid = T4ColumnGrid> = {
     xs: T4ColumnGrid
@@ -14,4 +22,26 @@ export type BreakpointSpecific<T4ColumnGrid = unknown, T12ColumnGrid = T4ColumnG
     md?: T4ColumnGrid
     lg?: T12ColumnGrid
     xl?: T12ColumnGrid
+}
+
+export function getBreakpointStyles(theme: Theme, callback: (breakpoint: Breakpoint) => SerializedStyles | null) {
+    return orderedBreakpoints.reduce((styles, breakpoint) => {
+        const breakpointStyles = callback(breakpoint)
+
+        if (!breakpointStyles) return styles
+
+        if (breakpoint === smallestBreakpoint) {
+            return css`
+        ${styles}
+        ${breakpointStyles}
+      `
+        }
+
+        return css`
+      ${styles}
+      ${theme.breakpoints.up(breakpoint)} {
+        ${breakpointStyles}
+      }
+    `
+    }, css``)
 }
