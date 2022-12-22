@@ -15,6 +15,10 @@ export function createTheme(themeFamily: ExtendedTheme, extendedTheme: DeepParti
     return createMuiTheme(baseTheme, themeFamily, extendedTheme) as unknown as Theme
 }
 
+export function useTheme() {
+    return useMuiTheme<EmotionTheme>()
+}
+
 export const baseTheme = createMuiTheme({
     borders,
     breakpoints,

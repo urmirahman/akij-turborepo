@@ -1,9 +1,12 @@
 import '../src/styles/globals.css';
 
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import { breakpoints } from '../src/components/ui/foundations/breakpoints'
 import { grid } from '../src/components/ui/foundations/grid'
+import { themes } from '../src/components/ui/foundations/theming'
 
 const viewportSizes = {
   xsViewport: {
@@ -67,3 +70,29 @@ export const parameters = {
     },
   },
 }
+
+export const globalTypes = {
+  selectedThemeName: {
+    name: 'Theme',
+    description: 'Change the theme',
+    defaultValue: 'primary-brown',
+    toolbar: {
+      icon: 'switchalt',
+      items: [...Object.keys(themes)],
+      showName: true,
+    },
+  },
+}
+
+const withThemeProvider = (Story, { globals: { selectedThemeName } }) => {
+  const selectedTheme = themes[selectedThemeName] ?? themes['primary-brown']
+
+  return (
+          <MuiThemeProvider theme={selectedTheme}>
+            <CssBaseline />
+            <Story />
+          </MuiThemeProvider>
+  )
+}
+
+export const decorators = [withThemeProvider]
