@@ -18,7 +18,8 @@ const config = {
   },
   images: {
     domains: [
-      "link.fobshanghai.com"
+      "link.fobshanghai.com",
+      "aladdin.akijfood.com"
     ]
   }
 };
