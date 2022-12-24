@@ -10,6 +10,5 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 export const Primary: ComponentStory<typeof Button> = () => (
-  // eslint-disable-next-line react/no-children-prop
-  <Button children={"Primary"} variant={"primary"} />
+  <Button variant={"primary"}>{"Button"}</Button>
 );
