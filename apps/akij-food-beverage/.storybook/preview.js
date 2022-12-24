@@ -3,6 +3,7 @@ import '../src/styles/globals.css';
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { FormatImageUrlProvider } from '../src/components/ui/contexts'
 
 import { breakpoints } from '../src/components/ui/foundations/breakpoints'
 import { grid } from '../src/components/ui/foundations/grid'
@@ -84,14 +85,37 @@ export const globalTypes = {
   },
 }
 
+function placeholderBasedFormatImageUrl(imageUrl, { width }) {
+  let formatted = imageUrl
+  let startIndex
+  while ((startIndex = formatted.indexOf('{h=')) !== -1) {
+    const endIndex = formatted.indexOf('}', startIndex)
+    const multiplier = +formatted.substring(startIndex + 3, endIndex)
+    formatted = formatted.substring(0, startIndex) + Math.round(width * multiplier) + formatted.substring(endIndex + 1)
+  }
+  return formatted.replace(/{w}/g, width)
+}
+
 const withThemeProvider = (Story, { globals: { selectedThemeName } }) => {
   const selectedTheme = themes[selectedThemeName] ?? themes['primary-brown']
 
+  setTimeout(() => {
+    ;[document.body, ...document.querySelectorAll('.docs-story')].forEach(($el) => {
+      $el.style.setProperty('background', selectedTheme.body.background.color)
+      $el.style.setProperty('color', selectedTheme.body.text.color)
+    })
+    ;[document.querySelector('#root'), ...document.querySelectorAll('[scale]')].forEach(($el) => {
+      $el && $el.style.setProperty('max-width', '100%')
+    })
+  })
+  
   return (
-          <MuiThemeProvider theme={selectedTheme}>
-            <CssBaseline />
-            <Story />
-          </MuiThemeProvider>
+    <FormatImageUrlProvider value={placeholderBasedFormatImageUrl}>
+      <MuiThemeProvider theme={selectedTheme}>
+        <CssBaseline />
+        <Story />
+      </MuiThemeProvider>
+    </FormatImageUrlProvider>  
   )
 }
 
