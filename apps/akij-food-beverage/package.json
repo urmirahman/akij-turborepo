@@ -13,7 +13,7 @@
     "cy:run": "cypress run --component",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "plop": "plop"
+    "make-feat": "plop"
   },
   "dependencies": {
     "@mui/material": "^5.11.1",
