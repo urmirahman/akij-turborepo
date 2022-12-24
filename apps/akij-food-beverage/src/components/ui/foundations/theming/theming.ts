@@ -2,6 +2,8 @@ import type { Theme as EmotionTheme } from '@emotion/react'
 import { createTheme as createMuiTheme, Theme as MuiTheme, useTheme as useMuiTheme } from '@mui/material/styles'
 import { Property } from 'csstype'
 
+import type { ButtonTheme } from '../../elements/Button'
+
 import { borders } from '../borders'
 import { breakpoints } from '../breakpoints'
 import { colors } from '../colors'
@@ -60,6 +62,9 @@ export type ExtendedTheme = {
         discount: { color: Property.Color }
         error: { color: Property.Color }
         text: { color: Property.Color }
+    },
+    elements: {
+        button: ButtonTheme
     }
 }
 

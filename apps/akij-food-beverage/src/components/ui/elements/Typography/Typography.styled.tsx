@@ -17,7 +17,7 @@ function getColor(
   if (design === "error") return theme.body.error.color;
   if (design === "discount") return theme.body.discount.color;
 
-  return theme.elements[design].color;
+  return theme.body.background;
 }
 
 const Typography = styled(MuiTypography)<StyledTypographyProps>`
