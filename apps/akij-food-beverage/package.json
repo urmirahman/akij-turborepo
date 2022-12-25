@@ -37,6 +37,7 @@
     "superjson": "1.9.1",
     "swiper": "^8.4.5",
     "ui": "*",
+    "uuid": "^9.0.0",
     "zod": "^3.18.0"
   },
   "devDependencies": {
@@ -63,6 +64,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "autoprefixer": "^10.4.7",
