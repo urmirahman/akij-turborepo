@@ -19,7 +19,8 @@ const config = {
   images: {
     domains: [
       "link.fobshanghai.com",
-      "aladdin.akijfood.com"
+      "aladdin.akijfood.com",
+      "cdn.sanity.io"
     ]
   }
 };
