@@ -1,15 +1,18 @@
 import type { Theme as EmotionTheme } from '@emotion/react'
-import { createTheme as createMuiTheme, Theme as MuiTheme, useTheme as useMuiTheme } from '@mui/material/styles'
-import { Property } from 'csstype'
+import type { Theme as MuiTheme } from '@mui/material/styles';
+import { createTheme as createMuiTheme, useTheme as useMuiTheme } from '@mui/material/styles'
+import type { Property } from 'csstype'
 
 import type { ButtonTheme } from '../../elements/Button'
-
+import type { HeadingTheme } from '../../elements/Heading'
 import { borders } from '../borders'
 import { breakpoints } from '../breakpoints'
 import { colors } from '../colors'
 import { grid } from '../grid'
-import { CustomSpacing, spacing } from '../spacing'
-import { CustomTypography, typography } from '../typography'
+import type { CustomSpacing } from '../spacing';
+import { spacing } from '../spacing'
+import type { CustomTypography } from '../typography';
+import { typography } from '../typography'
 
 export type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T
 
@@ -65,6 +68,7 @@ export type ExtendedTheme = {
     },
     elements: {
         button: ButtonTheme
+        heading: HeadingTheme
     }
 }
 

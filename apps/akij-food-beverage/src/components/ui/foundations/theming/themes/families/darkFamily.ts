@@ -11,5 +11,6 @@ export const darkFamily = {
     },
     elements: {
         button: buttonThemeForDarkBackground,
+        heading: { color: baseTheme.colors.neutrals.white },
     },
 }
