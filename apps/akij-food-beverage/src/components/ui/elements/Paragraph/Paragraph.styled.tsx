@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
 import { getSpacingStyles } from "../../foundations/spacing";
-import { Typography, TypographyProps } from "../Typography";
+import type { TypographyProps } from "../Typography";
+import { Typography } from "../Typography";
 import type { ParagraphProps } from "./Paragraph";
 
 type StyledParagraphProps = TypographyProps & Omit<ParagraphProps, "variant">;
