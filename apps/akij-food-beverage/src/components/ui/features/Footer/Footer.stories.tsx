@@ -78,10 +78,9 @@ const categorizedLinks = {
 
 const utilityLinks = {
   logo: {
-    alt: "Mars Wrigley",
+    alt: "Akij",
   },
-  copyrightText:
-    "© 2021 MMS.COM. Mars Incorporated and its affiliates. All Rights Reserved.",
+  copyrightText: "© 2021 Akijventure.COM. All Rights Reserved.",
   links: [
     {
       text: "Terms & Conditions",
@@ -122,8 +121,8 @@ const utilityLinks = {
       {
         url: "https://www.akijventure.com/",
         logo: {
-          alt: "Mars Wrigley",
-          href: "https://deu.mars.com/sites/g/files/jydpyr386/files/2019-03/Logos_MARS_WRIGLEY_CONFECTIONERY_28.png",
+          alt: "",
+          href: "",
         },
       },
     ],

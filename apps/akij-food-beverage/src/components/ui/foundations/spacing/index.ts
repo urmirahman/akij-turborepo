@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 
-import { BreakpointSpecific, getBreakpointStyles, smallestBreakpoint } from '../breakpoints'
+import type { BreakpointSpecific } from '../breakpoints';
+import { getBreakpointStyles, smallestBreakpoint } from '../breakpoints'
 import type { Theme } from '../theming'
 
 export const spacingBaseValue = 16

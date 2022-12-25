@@ -5,7 +5,7 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "storybook-static/**"],
       "env": [
-        "NODE_ENV", "VERCEL_URL", "PORT", "VERCEL"
+        "NODE_ENV", "VERCEL_URL", "PORT", "VERCEL", "ALLOW_ROBOTS", "CURRENT_DOMAIN"
       ]
     },
     "test": {
