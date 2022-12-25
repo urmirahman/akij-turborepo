@@ -5,6 +5,8 @@ import type { Property } from 'csstype'
 
 import type { ButtonTheme } from '../../elements/Button'
 import type { HeadingTheme } from '../../elements/Heading'
+import type { PriceTheme } from '../../elements/Price'
+
 import { borders } from '../borders'
 import { breakpoints } from '../breakpoints'
 import { colors } from '../colors'
@@ -69,6 +71,7 @@ export type ExtendedTheme = {
     elements: {
         button: ButtonTheme
         heading: HeadingTheme
+        price?: PriceTheme
     }
 }
 
