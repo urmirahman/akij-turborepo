@@ -8,6 +8,7 @@ import type { HeadingTheme } from '../../elements/Heading'
 import type { PriceTheme } from '../../elements/Price'
 import type { FormBaseFieldTheme } from '../../elements/FormBaseField';
 import type { FormInputTheme } from '../../elements/FormInput';
+import type { LinkTheme } from '../../elements/Link';
 
 import { borders } from '../borders'
 import { breakpoints } from '../breakpoints'
@@ -77,6 +78,7 @@ export type ExtendedTheme = {
             base: FormBaseFieldTheme
             input: FormInputTheme
         }
+        link: LinkTheme
         price?: PriceTheme
     }
 }

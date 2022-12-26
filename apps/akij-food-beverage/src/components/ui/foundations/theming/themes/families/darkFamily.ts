@@ -2,6 +2,7 @@ import { baseTheme } from '../../theming'
 import { buttonThemeForDarkBackground } from '../elements/button'
 import { formBaseTheme } from '../elements/formBase'
 import { formInputTheme } from '../elements/formInput'
+import { linkThemeForDarkBackground } from '../elements/link'
 
 export const darkFamily = {
     key: 'darkFamily',
@@ -18,5 +19,6 @@ export const darkFamily = {
             input: formInputTheme
         },
         heading: { color: baseTheme.colors.neutrals.white },
+        link: linkThemeForDarkBackground,
     },
 }
