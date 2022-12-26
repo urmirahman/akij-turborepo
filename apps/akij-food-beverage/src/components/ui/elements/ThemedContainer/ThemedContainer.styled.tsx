@@ -1,11 +1,9 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-import {
-  BreakpointSpecific,
-  getBreakpointStyles,
-} from "../../foundations/breakpoints";
-import { SpacingFactor } from "../../foundations/spacing";
+import type { BreakpointSpecific } from "../../foundations/breakpoints";
+import { getBreakpointStyles } from "../../foundations/breakpoints";
+import type { SpacingFactor } from "../../foundations/spacing";
 import type { Theme } from "../../foundations/theming";
 import type { ThemedContainerProps } from "./ThemedContainer";
 

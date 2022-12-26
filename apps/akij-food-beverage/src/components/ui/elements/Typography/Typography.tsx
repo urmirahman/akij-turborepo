@@ -1,5 +1,5 @@
-import type { TypographyProps as MuiTypographyProps } from "@mui/material";
-import { ElementType, forwardRef, ReactNode } from "react";
+import type { ElementType, ReactNode } from "react";
+import { forwardRef } from "react";
 
 import type { WithSpacing } from "../../foundations/spacing";
 import type { Theme } from "../../foundations/theming";

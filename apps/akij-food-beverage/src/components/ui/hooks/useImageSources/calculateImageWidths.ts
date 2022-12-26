@@ -1,12 +1,9 @@
-import type { TwelveColumnGridSpan } from '../../elements/GridColumn'
 import type { Breakpoint } from '../../foundations/breakpoints'
 import type { Theme } from '../../foundations/theming'
-import { getImageCalculationWidths } from './getImageCalculationWidths'
 
 export function calculateImageWidths(
     theme: Theme,
     breakpoint: Breakpoint,
-    spanOrPercent?: Extract<TwelveColumnGridSpan, number> | `${number}%`,
 ) {
     const span = 10;
 

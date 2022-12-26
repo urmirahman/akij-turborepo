@@ -1,4 +1,5 @@
-import { duration, easing, TransitionsOptions as MuiTransitionOptions } from '@mui/material/styles'
+import type { TransitionsOptions as MuiTransitionOptions } from '@mui/material/styles';
+import { duration, easing } from '@mui/material/styles'
 
 declare module '@mui/material/styles' {
     interface Easing {

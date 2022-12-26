@@ -1,6 +1,7 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
-import { Hero as Component, HeroProps } from "./Hero";
+import type { HeroProps } from "./Hero";
+import { Hero as Component } from "./Hero";
 import { HeroMock } from "./Hero.mocks";
 
 export default {

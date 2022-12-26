@@ -1,4 +1,4 @@
-import { BreakpointSpecific } from './breakpoints'
+import type { BreakpointSpecific } from './breakpoints'
 
 const marginWidth: Required<BreakpointSpecific<number>> = {
     xs: 24,

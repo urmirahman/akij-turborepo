@@ -1,5 +1,5 @@
-import { Meta } from "@storybook/react";
-import { Property } from "csstype";
+import type { Meta } from "@storybook/react";
+import type { Property } from "csstype";
 
 import { borders } from "../borders";
 import { fontSizes } from "../typography";

@@ -1,4 +1,5 @@
-import { RefObject, useEffect, useState } from 'react'
+import type { RefObject } from 'react';
+import { useEffect, useState } from 'react'
 
 export function useElementSize(elementRef: RefObject<HTMLElement>) {
     const [width, setWidth] = useState(0)

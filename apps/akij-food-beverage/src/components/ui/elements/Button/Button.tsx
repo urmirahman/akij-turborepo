@@ -1,4 +1,5 @@
-import { ButtonUnstyled, ButtonUnstyledProps } from "@mui/base";
+import type { ButtonUnstyledProps } from "@mui/base";
+import { ButtonUnstyled } from "@mui/base";
 import type { ReactNode } from "react";
 
 import type { BreakpointSpecific } from "../../foundations/breakpoints";
@@ -28,17 +29,7 @@ export type ButtonProps = Pick<
 
 type ButtonWidth = "contentWidth" | "fullWidth" | { minWidth: `${number}px` };
 
-export function Button({
-  disabled,
-  variant,
-  size: buttonSize,
-  nofollow = false,
-  width = "contentWidth",
-  wrap = false,
-  children,
-  price,
-  ...props
-}: ButtonProps) {
+export function Button({ children, ...props }: ButtonProps) {
   const render = <ButtonUnstyled {...props}>{children}</ButtonUnstyled>;
 
   return render;

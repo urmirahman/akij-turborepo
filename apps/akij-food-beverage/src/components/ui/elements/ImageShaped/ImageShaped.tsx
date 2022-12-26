@@ -1,5 +1,6 @@
 import type { Theme } from "../../foundations/theming";
-import { Image, ImageProps } from "../Image";
+import type { ImageProps } from "../Image";
+import { Image } from "../Image";
 import { Styled } from "./ImageShaped.styled";
 
 export type ImageShapedProps = ImageProps & {
@@ -17,7 +18,7 @@ export function ImageShaped({
 }: ImageShapedProps) {
   return (
     <Styled.Wrapper border={border} shape={shape}>
-      <Image {...imageProps} />
+      <Image {...imageProps} alt="akij-image" />
     </Styled.Wrapper>
   );
 }

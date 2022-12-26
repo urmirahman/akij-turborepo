@@ -1,10 +1,13 @@
 import { useMemo } from 'react'
 
-import { FormatImageUrl, ImageMediaParams, useFormatImageUrl } from '../../contexts'
+import type { FormatImageUrl, ImageMediaParams } from '../../contexts';
+import { useFormatImageUrl } from '../../contexts'
 import type { FourColumnGridSpan, TwelveColumnGridSpan } from '../../elements/GridColumn'
-import { Breakpoint, BreakpointSpecific, orderedBreakpoints, smallestBreakpoint } from '../../foundations/breakpoints'
+import type { Breakpoint, BreakpointSpecific } from '../../foundations/breakpoints';
+import { orderedBreakpoints, smallestBreakpoint } from '../../foundations/breakpoints'
 import type { ImageProps } from '../../elements/Image'
-import { Theme, useTheme } from '../../foundations/theming'
+import type { Theme } from '../../foundations/theming';
+import { useTheme } from '../../foundations/theming'
 import { calculateImageWidths } from './calculateImageWidths'
 
 type HookImageMediaParams = Pick<ImageMediaParams, 'aspectRatio' | 'scaleMode'>
@@ -115,11 +118,11 @@ function buildOptionsSources(
         } else {
             const percentage = options.width
             source = { ...source, sizes: percentage.replace('%', 'vw') }
-            imageWidthsFor1Dpr = breakpoints.flatMap((breakpoint) => calculateImageWidths(theme, breakpoint, percentage))
+            imageWidthsFor1Dpr = breakpoints.flatMap((breakpoint) => calculateImageWidths(theme, breakpoint))
         }
     } else {
         source = { ...source, span: options.span }
-        imageWidthsFor1Dpr = breakpoints.flatMap((breakpoint) => calculateImageWidths(theme, breakpoint, options.span))
+        imageWidthsFor1Dpr = breakpoints.flatMap((breakpoint) => calculateImageWidths(theme, breakpoint))
     }
 
     return [

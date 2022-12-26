@@ -2,12 +2,11 @@ import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
 import type { ReactNode } from "react";
 
 import type { BorderRadii } from "../../foundations/borders";
-import {
-  BreakpointSpecific,
-  smallestBreakpoint,
-} from "../../foundations/breakpoints";
+import type { BreakpointSpecific } from "../../foundations/breakpoints";
+import { smallestBreakpoint } from "../../foundations/breakpoints";
 import type { SpacingFactor } from "../../foundations/spacing";
-import { ThemeName, themes } from "../../foundations/theming";
+import type { ThemeName } from "../../foundations/theming";
+import { themes } from "../../foundations/theming";
 import { Styled } from "./ThemedContainer.styled";
 
 export type ThemedContainerProps = {

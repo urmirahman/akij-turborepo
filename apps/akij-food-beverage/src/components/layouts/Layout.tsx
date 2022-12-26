@@ -29,7 +29,6 @@ export function Layout({
   children,
   footer,
   h1,
-  chat,
 }: LayoutProps) {
   return (
     <>

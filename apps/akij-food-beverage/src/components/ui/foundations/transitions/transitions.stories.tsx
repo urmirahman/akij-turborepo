@@ -1,5 +1,5 @@
-import { Duration, Easing } from "@mui/material";
-import { Meta } from "@storybook/react";
+import type { Duration, Easing } from "@mui/material";
+import type { Meta } from "@storybook/react";
 
 import { baseTheme } from "../theming";
 

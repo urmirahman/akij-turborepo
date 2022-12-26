@@ -8,19 +8,19 @@ import Head from "next/head";
 import { FormatImageUrlProvider } from "../components/ui/contexts/FormatImageUrlContext";
 import { baseTheme } from "../components/ui/foundations/theming";
 import { isErrorProps } from "../utils/isErrorProps";
-import { useRouter } from "next/router";
+//import { useRouter } from "next/router";
 import { trpc } from "../utils/trpc";
-import { getLocaleInfo } from "../i18n/localeInfo";
+//import { getLocaleInfo } from "../i18n/localeInfo";
 import "../styles/globals.css";
 import { formatImageUrl } from "../utils/formatImageUrl";
-import { useMemo } from "react";
+//import { useMemo } from "react";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
-  const { locale } = useRouter();
-  const localeInfo = useMemo(() => getLocaleInfo(locale ?? ""), [locale]);
+  //const { locale } = useRouter();
+  //const localeInfo = useMemo(() => getLocaleInfo(locale ?? ""), [locale]);
 
   if (isErrorProps(pageProps)) {
     return (

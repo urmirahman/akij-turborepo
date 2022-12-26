@@ -1,4 +1,4 @@
-import { Property } from 'csstype'
+import type { Property } from 'csstype'
 
 import type { ButtonTheme } from '../../../../elements/Button'
 import { fontSizes } from '../../../typography'

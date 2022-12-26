@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
 import { baseTheme } from "../theming";
 import { spacingFactors } from "./";

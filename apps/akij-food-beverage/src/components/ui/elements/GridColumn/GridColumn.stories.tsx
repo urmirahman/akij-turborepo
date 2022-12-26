@@ -1,13 +1,10 @@
 import styled from "@emotion/styled";
-import { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
 import { useTheme } from "../../foundations/theming";
 import { GridRow } from "../GridRow";
-import {
-  FourColumnGridSpan,
-  GridColumn,
-  TwelveColumnGridSpan,
-} from "./GridColumn";
+import type { FourColumnGridSpan, TwelveColumnGridSpan } from "./GridColumn";
+import { GridColumn } from "./GridColumn";
 
 export default {
   component: GridColumn,

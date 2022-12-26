@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
-import { tableBodyClasses } from "@mui/material/TableBody";
 import MuiTableCell, { tableCellClasses } from "@mui/material/TableCell";
 import MuiTableHead from "@mui/material/TableHead";
-import { tableRowClasses } from "@mui/material/TableRow";
 import { visuallyHidden } from "@mui/utils";
 
 import type { Theme } from "../../foundations/theming";

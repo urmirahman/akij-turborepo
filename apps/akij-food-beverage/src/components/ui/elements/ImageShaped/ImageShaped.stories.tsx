@@ -1,6 +1,7 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { ImageShaped, ImageShapedProps } from "./ImageShaped";
+import type { ImageShapedProps } from "./ImageShaped";
+import { ImageShaped } from "./ImageShaped";
 
 export default {
   title: "ATOMS/Image Shaped",

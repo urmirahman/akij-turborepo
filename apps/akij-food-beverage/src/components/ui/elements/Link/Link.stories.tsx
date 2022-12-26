@@ -1,8 +1,5 @@
-import styled from "@emotion/styled";
-import type { ComponentMeta, ComponentStory, Story } from "@storybook/react";
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Paragraph } from "../../elements/Paragraph";
-import type { LinkProps } from "./Link";
 import { Link } from "./Link";
 
 export default {

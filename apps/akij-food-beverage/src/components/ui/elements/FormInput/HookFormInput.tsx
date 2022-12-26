@@ -58,10 +58,12 @@ export function HookFormInput({
           helpMessage={field.helpMessage}
           id={`${idPrefix}${controllerName}`}
           label={field.label}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onBlur={(event: any) => {
             onControllerBlur();
             onBlur?.(event);
           }}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onChange={(value: any) => {
             onControllerChange(value);
             onChange?.(value);

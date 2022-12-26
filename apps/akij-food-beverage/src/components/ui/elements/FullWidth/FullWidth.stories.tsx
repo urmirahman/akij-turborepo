@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
-import { FullWidth as Component, FullWidthProps } from "./FullWidth";
+import type { FullWidthProps } from "./FullWidth";
+import { FullWidth as Component } from "./FullWidth";
 
 export default {
   component: Component,

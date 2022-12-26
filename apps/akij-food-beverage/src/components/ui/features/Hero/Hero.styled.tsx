@@ -6,22 +6,12 @@ export const IMAGE_ASPECT_RATIO = "1:1";
 const IMAGE_HORIZONTAL_OFFSET_ON_LARGE = "13%";
 const IMAGE_HORIZONTAL_OFFSET_ON_MEDIUM = "23%";
 
-const RESERVED_BOTTOM_SPACING_FOR_LOWEST_LENTIL_ON_MOBILE = 2.5;
-const RESERVED_BOTTOM_SPACING_FOR_LOWEST_LENTIL = 3;
-
 const Hero = styled("div")(
   ({ theme }) => `
     position: relative;
     z-index: 0;
     margin-bottom: ${theme.spacing(5)};
     height: 100%;
-  `
-);
-
-const OverflowContainer = styled("div")(
-  ({ theme }) => `
-    overflow: hidden;
-  
   `
 );
 
@@ -49,7 +39,6 @@ const ImageWrapper = styled.div`
 
 export const Styled = {
   Hero,
-  OverflowContainer,
   GridColumn,
   ImagePositionWrapper,
   ImageWrapper,

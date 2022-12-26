@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
 import { GridColumn } from "../GridColumn";
 import { GridRow } from "./GridRow";

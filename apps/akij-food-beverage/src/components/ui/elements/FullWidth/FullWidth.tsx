@@ -1,6 +1,9 @@
 import type { ReactNode } from "react";
 
-import { Breakpoint, smallestBreakpoint } from "../../foundations/breakpoints";
+import type {
+  Breakpoint,
+  smallestBreakpoint,
+} from "../../foundations/breakpoints";
 import { Styled } from "./FullWidth.styled";
 
 export type FullWidthProps = {

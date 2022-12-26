@@ -1,12 +1,9 @@
 import MuiInputUnstyled from "@mui/base/InputUnstyled";
 import type { FocusEvent, HTMLInputTypeAttribute } from "react";
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 
 import type { FormBaseFieldProps } from "../FormBaseField";
-import { FormBaseField, getState } from "../FormBaseField";
-import { Icon } from "../Icon";
-import { Styled } from "./FormInput.styled";
-import { usePasswordField } from "./usePasswordField";
+import { FormBaseField } from "../FormBaseField";
 
 export type FormInputProps = FormBaseFieldProps & {
   type?: Extract<HTMLInputTypeAttribute, "email" | "password" | "tel" | "text">;
@@ -19,39 +16,19 @@ export type FormInputProps = FormBaseFieldProps & {
 
 // eslint-disable-next-line react/display-name
 export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
-  (
-    {
-      id,
-      label,
-      type: inputType = "text",
-      value,
-      onBlur,
-      onChange,
-      onFocus,
-      helpMessage,
-      errorMessage,
-      pattern,
-      readOnly,
-      required,
-      ...props
-    },
-    forwardedRef
-  ) => {
+  ({
+    id,
+    label,
+    type: inputType = "text",
+    value,
+    helpMessage,
+    errorMessage,
+    readOnly,
+    required,
+  }) => {
     const hasValue = !!value;
-    const [hasFocus, setHasFocus] = useState(false);
 
-    const isActive = hasValue || hasFocus;
-
-    const {
-      inputRef,
-      onCopy,
-      internalType,
-      togglePasswordType,
-      passwordIconProps,
-    } = usePasswordField({
-      forwardedRef,
-      inputType,
-    });
+    const isActive = hasValue;
 
     return (
       <FormBaseField
@@ -64,45 +41,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
         readOnly={readOnly}
         required={required}
       >
-        <MuiInputUnstyled
-          aria-label={errorMessage ? `${label}. ${errorMessage}` : undefined}
-          autoComplete={inputType === "password" ? "off" : undefined}
-          components={{ Input: Styled.Input }}
-          componentsProps={{
-            input: {
-              ...props,
-              inputType,
-              pattern,
-              ref: inputRef,
-              state: getState({ readOnly, errorMessage, isActive }),
-            } as unknown,
-          }}
-          id={id}
-          onBlur={(evt: FocusEvent<HTMLInputElement>) => {
-            setHasFocus(false);
-            onBlur?.(evt);
-          }}
-          onChange={(event) => {
-            onChange(event.target.value);
-          }}
-          onCopy={onCopy}
-          onFocus={(evt: FocusEvent<HTMLInputElement>) => {
-            setHasFocus(true);
-            onFocus?.(evt);
-          }}
-          readOnly={readOnly}
-          required={required}
-          type={internalType}
-          value={value ?? undefined}
-        />
-        {inputType === "password" && (
-          <Styled.PasswordVisibilityButton
-            onClick={togglePasswordType}
-            type="button"
-          >
-            <Icon {...passwordIconProps} />
-          </Styled.PasswordVisibilityButton>
-        )}
+        <MuiInputUnstyled />
       </FormBaseField>
     );
   }

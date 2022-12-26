@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
 import { Heading } from "../../elements/Heading";
 import { fontCombinations, fontFamilies, fontWeights } from ".";

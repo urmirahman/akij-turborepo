@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
+import type { Breakpoint } from "../../foundations/breakpoints";
 import {
-  Breakpoint,
   orderedBreakpoints,
   smallestBreakpoint,
 } from "../../foundations/breakpoints";

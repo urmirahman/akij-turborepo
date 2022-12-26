@@ -1,6 +1,7 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
-import { Typography, TypographyProps } from "../../elements/Typography";
+import type { TypographyProps } from "../../elements/Typography";
+import { Typography } from "../../elements/Typography";
 import { typography } from ".";
 
 export default {

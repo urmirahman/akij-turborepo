@@ -1,7 +1,6 @@
-import { ReactNode, useRef } from "react";
+import type { ReactNode } from "react";
+import { useRef } from "react";
 
-import { ThemedContainer } from "../../elements/ThemedContainer";
-import { Typography } from "../../elements/Typography";
 import { Styled } from "./Header.styled";
 
 export type HeaderProps = {
@@ -15,15 +14,8 @@ export type HeaderProps = {
   notificationsAria?: string;
   notificationFeatures?: ReactNode;
 
-  /* level1Items: Level1MenuProps["items"];
-  customerCtas?: CustomerCtasProps;
-  toolLinks?: ToolLinksProps;
-  searchBar: SearchBarProps;
-  accountLink: AccountLinkForDesktopProps;
-  cartLink: CartLinkProps; */
   signOut: () => void;
   isSignedIn: boolean;
-  //languageSelector: Level1MenuProps["languageSelector"];
 
   onMenuVisibilityChange: (
     level: 1 | 2,
@@ -37,7 +29,7 @@ export type HeaderProps = {
   ) => void;
 };
 
-export function Header(props: HeaderProps) {
+export function Header() {
   const headerRef = useRef<HTMLElement>(null);
 
   return (

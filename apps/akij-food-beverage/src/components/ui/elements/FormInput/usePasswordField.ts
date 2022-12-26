@@ -11,6 +11,7 @@ type UsePasswordFieldParams = {
 
 export function usePasswordField({ forwardedRef, inputType }: UsePasswordFieldParams) {
     const inputRef = useRef<HTMLInputElement>(null)
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     useImperativeHandle(forwardedRef, () => inputRef.current ?? null!)
 
     const [internalType, setInternalType] = useState(inputType)
@@ -39,7 +40,7 @@ export function usePasswordField({ forwardedRef, inputType }: UsePasswordFieldPa
         inputRef,
         onCopy: inputType === 'password' ? (e: ClipboardEvent<HTMLDivElement>) => e.preventDefault() : undefined,
         internalType,
-        togglePasswordType: () => setInternalType((prev: any) => (prev === 'text' ? 'password' : 'text')),
+        togglePasswordType: () => setInternalType((prev: string) => (prev === 'text' ? 'password' : 'text')),
         passwordIconProps: {
             name: internalType === 'text' ? 'hide' : 'show',
             title: internalType === 'text' ? 'hide' : 'show',

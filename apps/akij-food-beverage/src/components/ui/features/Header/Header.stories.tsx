@@ -1,6 +1,7 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
-import { Header as Component, HeaderProps } from "./Header";
+import type { HeaderProps } from "./Header";
+import { Header as Component } from "./Header";
 
 export default {
   component: Component,
@@ -12,9 +13,8 @@ export default {
   },
 } as Meta;
 
-export const Header: Story<HeaderProps> = (props) => (
+export const Header: Story<HeaderProps> = () => (
   <>
-    <Component {...props} />
     <div
       style={{
         display: "flex",
@@ -49,18 +49,10 @@ Header.args = {
         throw new Error("Function not implemented.");
       }}
       isSignedIn={false}
-      onMenuVisibilityChange={function (
-        level: 1 | 2,
-        isNowVisible: boolean,
-        buttonText: string
-      ): void {
+      onMenuVisibilityChange={function (): void {
         throw new Error("Function not implemented.");
       }}
-      onLinkClick={function (
-        menuLevel: string | 1 | 2 | 3,
-        linkText: string,
-        linkUrl: string
-      ): void {
+      onLinkClick={function (): void {
         throw new Error("Function not implemented.");
       }}
     />

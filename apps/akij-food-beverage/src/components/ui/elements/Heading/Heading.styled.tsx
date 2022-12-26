@@ -9,7 +9,7 @@ type StyledHeadingProps = TypographyProps &
   Omit<HeadingProps, "tag" | "children">;
 
 const Heading = styled(Typography)<StyledHeadingProps>(
-  ({ theme, ...props }) => css`
+  ({ theme }) => css`
     color: ${theme.elements.heading.color};
     hyphens: auto;
   `

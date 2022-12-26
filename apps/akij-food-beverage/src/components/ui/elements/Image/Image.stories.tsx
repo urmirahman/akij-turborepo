@@ -1,6 +1,7 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
-import { Image as Component, ImageProps } from "./Image";
+import type { ImageProps } from "./Image";
+import { Image as Component } from "./Image";
 
 export default {
   component: Component,

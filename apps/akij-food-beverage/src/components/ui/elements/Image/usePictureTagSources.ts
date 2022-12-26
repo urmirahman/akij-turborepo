@@ -1,9 +1,13 @@
-import { SourceHTMLAttributes, useMemo } from 'react'
+import type { SourceHTMLAttributes } from 'react';
+import { useMemo } from 'react'
 
-import { Breakpoint, orderedBreakpoints, smallestBreakpoint } from '../../foundations/breakpoints'
-import { Theme, useTheme } from '../../foundations/theming'
+import type { Breakpoint } from '../../foundations/breakpoints';
+import { orderedBreakpoints, smallestBreakpoint } from '../../foundations/breakpoints'
+import type { Theme } from '../../foundations/theming';
+import { useTheme } from '../../foundations/theming'
 import { getSpanVwCalcForGivenValues } from '../../../../utils/getSpanVwCalc'
-import { ImageProps, isSizesImageSource } from './Image'
+import type { ImageProps } from './Image';
+import { isSizesImageSource } from './Image'
 
 type HtmlSource = Pick<SourceHTMLAttributes<HTMLSourceElement>, 'media' | 'srcSet' | 'sizes' | 'type'>
 

@@ -49,6 +49,7 @@ export function OptionalExternalUnstyledLink({
   );
 }
 
+// eslint-disable-next-line react/display-name
 export const UnstyledLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
   (props, ref) => {
     return (
@@ -63,6 +64,7 @@ export const UnstyledLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
   }
 );
 
+// eslint-disable-next-line react/display-name
 const RenderComponent = forwardRef<HTMLAnchorElement, ComponentProps>(
   ({ component: Component = "a", href, ...props }, ref) => (
     <Component {...props} href={href} ref={ref} />
