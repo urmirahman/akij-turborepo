@@ -64,6 +64,37 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
         readOnly={readOnly}
         required={required}
       >
+        <MuiInputUnstyled
+          aria-label={errorMessage ? `${label}. ${errorMessage}` : undefined}
+          autoComplete={inputType === "password" ? "off" : undefined}
+          components={{ Input: Styled.Input }}
+          componentsProps={{
+            input: {
+              ...props,
+              inputType,
+              pattern,
+              ref: inputRef,
+              state: getState({ readOnly, errorMessage, isActive }),
+            } as unknown,
+          }}
+          id={id}
+          onBlur={(evt: FocusEvent<HTMLInputElement>) => {
+            setHasFocus(false);
+            onBlur?.(evt);
+          }}
+          onChange={(event) => {
+            onChange(event.target.value);
+          }}
+          onCopy={onCopy}
+          onFocus={(evt: FocusEvent<HTMLInputElement>) => {
+            setHasFocus(true);
+            onFocus?.(evt);
+          }}
+          readOnly={readOnly}
+          required={required}
+          type={internalType}
+          value={value ?? undefined}
+        />
         {inputType === "password" && (
           <Styled.PasswordVisibilityButton
             onClick={togglePasswordType}
