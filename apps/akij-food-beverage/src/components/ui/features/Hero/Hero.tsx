@@ -5,6 +5,7 @@ import type { ContextlessImageProps } from "../../elements/Image";
 import type { ThemeName } from "../../foundations/theming";
 import type { TrackLinkHandler } from "../../../../types/types";
 import { Styled } from "./Hero.styled";
+import { Heading } from "../../elements/Heading";
 
 export type HeroProps = {
   theme?: ThemeName;
@@ -34,7 +35,11 @@ function RenderHero({ theme }: HeroProps) {
     <Styled.Hero data-testid="Hero">
       <GridRow>
         <Styled.GridColumn data-testid="Hero-Image" lg={6} xs={12}>
-          Hero
+          <Styled.Heading>
+            <Heading tag="span" variant={"h1BigBoldSerif"}>
+              Akij
+            </Heading>
+          </Styled.Heading>
         </Styled.GridColumn>
       </GridRow>
     </Styled.Hero>

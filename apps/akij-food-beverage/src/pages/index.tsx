@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Button } from "ui/components/Buttons";
 import { FaBeer } from "react-icons/fa";
+import { Hero } from "../components/ui/features/Hero";
+import { gqlClean } from "../utils/gqlClean";
 
 const Home: NextPage = () => {
   return (
@@ -20,9 +22,26 @@ const Home: NextPage = () => {
             width={400}
             height={400}
           />
-          <Button variant={"primary"}>
-            <FaBeer />
-          </Button>
+          <Hero
+            overline={""}
+            headingLine1={""}
+            image={{
+              href: "http://localhost:3010/_next/image?url=http%3A%2F%2Flink.fobshanghai.com%2Fbbsimage%2Ffair%2Fgulfood2020%2F3546.png&w=640&q=75",
+              alt: gqlClean("Akij"),
+            }}
+            firstButton={{
+              variant: "primary",
+              text: "",
+              href: "",
+            }}
+            trackLinkClick={function (event: {
+              buttonName: string;
+              buttonText: string;
+              buttonCategory: string;
+            }): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
         </div>
       </main>
     </>

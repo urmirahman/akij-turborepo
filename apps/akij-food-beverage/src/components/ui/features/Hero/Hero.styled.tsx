@@ -37,8 +37,15 @@ const ImageWrapper = styled.div`
   position: relative;
 `;
 
+const Heading = styled("h2")`
+  span {
+    display: block;
+  }
+`;
+
 export const Styled = {
   Hero,
+  Heading,
   GridColumn,
   ImagePositionWrapper,
   ImageWrapper,

@@ -1,10 +1,11 @@
+import type { ExtendedTheme } from '../../theming';
 import { baseTheme } from '../../theming'
 import { buttonThemeForDarkBackground } from '../elements/button'
 import { formBaseTheme } from '../elements/formBase'
 import { formInputTheme } from '../elements/formInput'
 import { linkThemeForDarkBackground } from '../elements/link'
 
-export const darkFamily = {
+export const darkFamily: ExtendedTheme = {
     key: 'darkFamily',
     body: {
         background: { color: baseTheme.colors.neutrals.black },

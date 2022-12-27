@@ -10,14 +10,25 @@ import type { FormBaseFieldTheme } from '../../elements/FormBaseField';
 import type { FormInputTheme } from '../../elements/FormInput';
 import type { LinkTheme } from '../../elements/Link';
 
-import { borders } from '../borders'
-import { breakpoints } from '../breakpoints'
-import { colors } from '../colors'
-import { grid } from '../grid'
+import { borders } from '../borders';
+import { breakpoints } from '../breakpoints';
+import { colors } from '../colors';
+import { grid } from '../grid';
 import type { CustomSpacing } from '../spacing';
-import { spacing } from '../spacing'
+import { spacing } from '../spacing';
 import type { CustomTypography } from '../typography';
-import { typography } from '../typography'
+import { typography } from '../typography';
+import { transitions } from '../transitions';
+
+export const baseTheme = createMuiTheme({
+    borders,
+    breakpoints,
+    colors,
+    grid,
+    spacing,
+    transitions,
+    typography,
+})
 
 export type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T
 
@@ -28,15 +39,6 @@ export function createTheme(themeFamily: ExtendedTheme, extendedTheme: DeepParti
 export function useTheme() {
     return useMuiTheme<EmotionTheme>()
 }
-
-export const baseTheme = createMuiTheme({
-    borders,
-    breakpoints,
-    colors,
-    grid,
-    spacing,
-    typography,
-})
 
 import '@emotion/react'
 
@@ -73,11 +75,11 @@ export type ExtendedTheme = {
     },
     elements: {
         button: ButtonTheme
-        heading: HeadingTheme
         form: {
             base: FormBaseFieldTheme
             input: FormInputTheme
         }
+        heading: HeadingTheme
         link: LinkTheme
         price?: PriceTheme
     }

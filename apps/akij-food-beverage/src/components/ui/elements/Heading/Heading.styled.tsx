@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
+import { baseTheme } from "../../foundations/theming";
 import type { TypographyProps } from "../Typography";
 import { Typography } from "../Typography";
 import type { HeadingProps } from "./Heading";
@@ -10,7 +11,7 @@ type StyledHeadingProps = TypographyProps &
 
 const Heading = styled(Typography)<StyledHeadingProps>(
   ({ theme }) => css`
-    color: ${theme.elements.heading.color};
+    color: ${baseTheme.colors.neutrals.black};
     hyphens: auto;
   `
 );
