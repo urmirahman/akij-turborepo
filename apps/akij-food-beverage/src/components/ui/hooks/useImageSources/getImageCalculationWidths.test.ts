@@ -1,3 +1,4 @@
+import { expect } from '@jest/globals';
 import { mockTheme } from '../../foundations/theming/ThemeProvider.mock'
 import { getImageCalculationWidths } from './getImageCalculationWidths'
 

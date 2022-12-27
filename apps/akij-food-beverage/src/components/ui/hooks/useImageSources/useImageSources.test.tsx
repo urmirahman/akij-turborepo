@@ -1,5 +1,6 @@
 import type { FormatImageUrl } from "../../contexts/FormatImageUrlContext";
 import type { BreakpointSpecific } from "../../foundations/breakpoints";
+import { expect } from "@jest/globals";
 
 jest.mock("./calculateImageWidths", () => {
   return {

@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 
 import { wrapper } from "../../../../testing";
 import { usePasswordField } from "./usePasswordField";
+import { expect } from "@jest/globals";
 
 function TestComponent() {
   const { inputRef, internalType, togglePasswordType } = usePasswordField({

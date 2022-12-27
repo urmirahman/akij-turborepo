@@ -1,6 +1,6 @@
 import { composeStories } from "@storybook/testing-react";
 import { render, screen } from "@testing-library/react";
-
+import { expect } from "@jest/globals";
 import * as stories from "./ImageShaped.stories";
 
 const composedStories = composeStories(stories);
