@@ -1,7 +1,7 @@
 import type { HeroProps } from "./Hero";
 
 export const HeroMock: HeroProps = {
-  theme: "primary-blue",
+  theme: "white-brown",
   overline: "celebrate christmas",
   headingLine: "light up their",
   image: {

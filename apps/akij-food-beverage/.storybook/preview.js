@@ -76,7 +76,7 @@ export const globalTypes = {
   selectedThemeName: {
     name: 'Theme',
     description: 'Change the theme',
-    defaultValue: 'primary-brown',
+    defaultValue: 'white-brown',
     toolbar: {
       icon: 'switchalt',
       items: [...Object.keys(themes)],
@@ -97,7 +97,7 @@ function placeholderBasedFormatImageUrl(imageUrl, { width }) {
 }
 
 const withThemeProvider = (Story, { globals: { selectedThemeName } }) => {
-  const selectedTheme = themes[selectedThemeName] ?? themes['primary-brown']
+  const selectedTheme = themes[selectedThemeName] ?? themes['white-brown']
 
   setTimeout(() => {
     ;[document.body, ...document.querySelectorAll('.docs-story')].forEach(($el) => {

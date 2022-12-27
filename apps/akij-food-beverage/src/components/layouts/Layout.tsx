@@ -24,7 +24,7 @@ type LayoutProps = {
 };
 
 export function Layout({
-  theme = "primary-brown",
+  theme = "white-brown",
   header,
   children,
   footer,
