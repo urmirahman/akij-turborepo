@@ -22,7 +22,7 @@ Default.args = {
 export const WithSingleHeading = Template.bind({});
 WithSingleHeading.args = {
   ...HeroMock,
-  headingLine2: undefined,
+  headingLine: undefined,
 };
 
 export const WithoutTheme = Template.bind({});

@@ -1,51 +1,56 @@
-import { Button } from "../../elements/Button";
-import type { ButtonProps } from "../../elements/Button";
-import { GridRow } from "../../elements/GridRow";
 import { ThemedContainer } from "../../elements/ThemedContainer";
 import type { ContextlessImageProps } from "../../elements/Image";
 import type { ThemeName } from "../../foundations/theming";
-import type { TrackLinkHandler } from "../../../../types/types";
 import { Styled } from "./Hero.styled";
-import { Heading } from "../../elements/Heading";
-import { Button as ButtonP } from "ui/components/Buttons";
+import Image from "next/image";
 
 export type HeroProps = {
   theme?: ThemeName;
   overline: string;
-  headingLine1: string;
-  headingLine2?: string;
+  headingLine: string;
   image: ContextlessImageProps;
-  firstButton: {
-    variant: ButtonProps["variant"];
-    text: string;
-    href: string;
-  };
-  secondButton?: {
-    text: string;
-    href: string;
-  };
-  lentils?: Array<{
-    color: string;
-    imageSource?: string;
-  }>;
-  trackLinkClick: TrackLinkHandler;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function RenderHero({ firstButton, trackLinkClick }: HeroProps) {
+function RenderHero({ theme, headingLine, image }: HeroProps) {
   return (
     <Styled.Hero data-testid="Hero">
-      <GridRow>
-        <Styled.GridColumn data-testid="Hero-Image" lg={6} xs={12}>
-          <Styled.Heading>
-            <Heading tag="span" variant={"h1BigBoldSerif"}>
-              Akij
-            </Heading>
-
-            <ButtonP variant={"primary"}>{"Button"}</ButtonP>
-          </Styled.Heading>
-        </Styled.GridColumn>
-      </GridRow>
+      <div className="bg-gray-50 px-6 py-12 text-center text-gray-800 md:px-12 lg:text-left">
+        <div className="container mx-auto xl:px-32">
+          <div className="flex grid items-center gap-12 lg:grid-cols-2">
+            <div className="mt-12 lg:mt-0">
+              <h1 className="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
+                The best offer <br />
+                <span className="text-blue-600">for your business</span>
+              </h1>
+              <a
+                className="mr-2 inline-block rounded bg-blue-600 px-7 py-3 text-sm font-medium uppercase leading-snug text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+                href="#!"
+                role="button"
+              >
+                Get started
+              </a>
+              <a
+                className="inline-block rounded bg-transparent px-7 py-3 text-sm font-medium uppercase leading-snug text-blue-600 transition duration-150 ease-in-out hover:bg-gray-100 hover:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+                href="#!"
+                role="button"
+              >
+                Learn more
+              </a>
+            </div>
+            <div className="mb-12 lg:mb-0">
+              <img
+                src={image.href}
+                className="w-fullrounded-lg shadow-lg"
+                alt={image.alt}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </Styled.Hero>
   );
 }

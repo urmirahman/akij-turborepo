@@ -15,7 +15,7 @@ export type ImageProps = {
    * The picture tag sources; list containing properties: "media", "srcSet" (list containing properties: "url" & "width"), "span" & "type".
    */
   sources: Array<ImageSource>;
-  alt?: string;
+  alt: string;
   lazy?: boolean;
   aspectRatio?: AspectRatio;
   onLoad?: () => void;
@@ -65,26 +65,13 @@ export function Image({
   ...props
 }: ImageProps) {
   const { htmlSources, fallbackSrc } = usePictureTagSources(sources);
+  console.log(htmlSources, fallbackSrc, component, sources);
 
   const ImageComponent = component ?? Styled.Image;
 
   return (
     <picture>
-      {htmlSources.map(({ media, sizes, srcSet, type }) => (
-        <source
-          key={`${srcSet ?? ""}${type ?? ""}`}
-          media={media}
-          sizes={sizes}
-          srcSet={srcSet}
-          type={type}
-        />
-      ))}
-      <ImageComponent
-        {...props}
-        alt={alt ?? ""}
-        loading={lazy ? "lazy" : undefined}
-        src={fallbackSrc}
-      />
+      {/* <Image {...props} alt={alt ?? ""} src={fallbackSrc} /> */}
     </picture>
   );
 }

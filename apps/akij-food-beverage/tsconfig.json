@@ -13,10 +13,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "~/api/*": ["src/api/*"],
+      "~/generated": ["src/generated"],
+      "~/i18n": ["src/i18n"],
+      "~/services/*": ["src/services/*"],
+      "~/ui/*": ["src/ui/*"],
+      "~/utils": ["src/utils"],
+      "~/utils/*": ["src/utils/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./node_modules/@dynatrace/"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "next.config.mjs"],
   "types": ["cypress", "cypress-axe", "node", "@testing-library/jest-dom", "jest"],
   "exclude": ["node_modules"]
 }
