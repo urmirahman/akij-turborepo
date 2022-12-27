@@ -4,6 +4,9 @@ import type { ReactNode } from "react";
 
 import type { BreakpointSpecific } from "../../foundations/breakpoints";
 import type { WithSpacing } from "../../foundations/spacing";
+import { Icon } from "../Icon";
+
+import { Styled } from "./Button.styled";
 
 export type ButtonProps = Pick<
   ButtonUnstyledProps,
@@ -29,8 +32,25 @@ export type ButtonProps = Pick<
 
 type ButtonWidth = "contentWidth" | "fullWidth" | { minWidth: `${number}px` };
 
-export function Button({ children, ...props }: ButtonProps) {
-  const render = <ButtonUnstyled {...props}>{children}</ButtonUnstyled>;
+export function Button({
+  disabled,
+  variant,
+  size: buttonSize,
+  nofollow = false,
+  width = "contentWidth",
+  wrap = false,
+  children,
+  price,
+  ...props
+}: ButtonProps) {
+  const render = (
+    <ButtonUnstyled>
+      <Styled.ChildrenWrapper price={price} wrap={wrap}>
+        {children}
+      </Styled.ChildrenWrapper>
+      {price && <Styled.PriceWrapper>{price}</Styled.PriceWrapper>}
+    </ButtonUnstyled>
+  );
 
   return render;
 }

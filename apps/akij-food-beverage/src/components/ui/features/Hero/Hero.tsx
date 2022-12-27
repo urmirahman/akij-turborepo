@@ -1,3 +1,4 @@
+import { Button } from "../../elements/Button";
 import type { ButtonProps } from "../../elements/Button";
 import { GridRow } from "../../elements/GridRow";
 import { ThemedContainer } from "../../elements/ThemedContainer";
@@ -6,6 +7,7 @@ import type { ThemeName } from "../../foundations/theming";
 import type { TrackLinkHandler } from "../../../../types/types";
 import { Styled } from "./Hero.styled";
 import { Heading } from "../../elements/Heading";
+import { Button as ButtonP } from "ui/components/Buttons";
 
 export type HeroProps = {
   theme?: ThemeName;
@@ -30,7 +32,7 @@ export type HeroProps = {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function RenderHero({ theme }: HeroProps) {
+function RenderHero({ firstButton, trackLinkClick }: HeroProps) {
   return (
     <Styled.Hero data-testid="Hero">
       <GridRow>
@@ -39,6 +41,8 @@ function RenderHero({ theme }: HeroProps) {
             <Heading tag="span" variant={"h1BigBoldSerif"}>
               Akij
             </Heading>
+
+            <ButtonP variant={"primary"}>{"Button"}</ButtonP>
           </Styled.Heading>
         </Styled.GridColumn>
       </GridRow>
