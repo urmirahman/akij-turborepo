@@ -19,14 +19,15 @@ Default.args = {
   ...HeroMock,
 };
 
-export const WithSingleHeading = Template.bind({});
-WithSingleHeading.args = {
+export const WithIngredients = Template.bind({});
+WithIngredients.args = {
   ...HeroMock,
   headingLine: undefined,
 };
 
-export const WithoutTheme = Template.bind({});
-WithoutTheme.args = {
+export const WithoutIngredients = Template.bind({});
+WithoutIngredients.args = {
   ...HeroMock,
   theme: undefined,
+  ingredients: false,
 };

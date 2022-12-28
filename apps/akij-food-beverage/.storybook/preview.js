@@ -1,5 +1,5 @@
 import '../src/styles/globals.css';
-
+import * as nextImage from "next/image"
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
@@ -8,6 +8,34 @@ import { FormatImageUrlProvider } from '../src/components/ui/contexts'
 import { breakpoints } from '../src/components/ui/foundations/breakpoints'
 import { grid } from '../src/components/ui/foundations/grid'
 import { themes } from '../src/components/ui/foundations/theming'
+
+Object.defineProperty(nextImage, "default", {
+  configurable: true,
+  value: props => {
+    const { width, height } = props
+    const ratio = (height / width) * 100
+    return (
+      <div
+        style={{
+          paddingBottom: `${ratio}%`,
+          position: "relative",
+        }}
+      >
+        <img
+          style={{
+            objectFit: "cover",
+            position: "absolute",
+            minWidth: "100%",
+            minHeight: "100%",
+            maxWidth: "100%",
+            maxHeight: "100%",
+          }}
+          {...props}
+        />
+      </div>
+    )
+  },
+})
 
 const viewportSizes = {
   xsViewport: {

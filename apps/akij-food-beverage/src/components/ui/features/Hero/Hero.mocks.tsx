@@ -2,10 +2,10 @@ import type { HeroProps } from "./Hero";
 
 export const HeroMock: HeroProps = {
   theme: "white-brown",
-  overline: "celebrate christmas",
-  headingLine: "light up their",
+  headingLine: "Akij Hero",
   image: {
-    alt: "Standard Alt Text",
+    alt: "Akij logo",
     href: "https://www.akijfood.com/public/assets/img/logo.png",
   },
+  ingredients: true,
 };

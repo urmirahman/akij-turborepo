@@ -1,8 +1,6 @@
 /* const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin') */
 
-//const path = require('path');
-
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -17,7 +15,7 @@ module.exports = {
     /* {
       name: 'storybook-addon-next',
       options: {
-        nextConfigPath: path.resolve(__dirname, '../next.config.mjs')
+        nextConfigPath: path.resolve(__dirname, '../next.config.js')
       }
     } */
   ],

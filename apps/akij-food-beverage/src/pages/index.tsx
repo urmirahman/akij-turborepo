@@ -13,14 +13,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b">
+      <main className="min-h-screen bg-gradient-to-b">
         <Hero
-          overline={""}
-          headingLine={""}
+          headingLine={"Hero section"}
           image={{
             href: "https://www.akijfood.com/public/assets/img/logo.png",
             alt: "Akij",
           }}
+          ingredients={true}
         />
       </main>
       <Footer />
