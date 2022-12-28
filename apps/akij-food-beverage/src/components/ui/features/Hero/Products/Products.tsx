@@ -4,7 +4,7 @@ import AkijImage from "../Animations/dummy-assets/mojo.png";
 export default function Products() {
   return (
     <div>
-      <img src={AkijImage.src} alt="me" />
+      <img src={AkijImage} alt="me" />
     </div>
   );
 }

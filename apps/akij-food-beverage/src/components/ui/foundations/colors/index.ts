@@ -10,12 +10,12 @@ export const colors = {
     asRgb: (hexCode: string) => `rgb(${toRgbValues(hexCode)})`,
     asRgba: (hexCode: string, opacity: number) => `rgba(${toRgbValues(hexCode)}, ${opacity})`,
     primary: {
-        yellow: '#ffd200',
-        brown: '#5a1f06',
-        red: '#d70100',
-        orange: '#fa6400',
-        blue: '#0e74e1',
-        green: '#00a832',
+        yellow: '#F4C70A',
+        brown: '#943C15',
+        red: '#E21A22',
+        orange: '#E16525',
+        blue: '#0068B1',
+        green: '#43AA4C',
     },
     secondary: {
         teal: '#00403e',
