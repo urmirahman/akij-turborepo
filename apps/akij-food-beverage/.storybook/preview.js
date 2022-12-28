@@ -1,5 +1,5 @@
 import '../src/styles/globals.css';
-import * as nextImage from "next/image"
+import * as NextImage from "next/image"
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
@@ -9,33 +9,18 @@ import { breakpoints } from '../src/components/ui/foundations/breakpoints'
 import { grid } from '../src/components/ui/foundations/grid'
 import { themes } from '../src/components/ui/foundations/theming'
 
-Object.defineProperty(nextImage, "default", {
+const OriginalNextImage = NextImage.default;
+
+Object.defineProperty(NextImage, 'default', {
   configurable: true,
-  value: props => {
-    const { width, height } = props
-    const ratio = (height / width) * 100
-    return (
-      <div
-        style={{
-          paddingBottom: `${ratio}%`,
-          position: "relative",
-        }}
-      >
-        <img
-          style={{
-            objectFit: "cover",
-            position: "absolute",
-            minWidth: "100%",
-            minHeight: "100%",
-            maxWidth: "100%",
-            maxHeight: "100%",
-          }}
-          {...props}
-        />
-      </div>
-    )
-  },
-})
+  value: (props) => (
+    <OriginalNextImage
+      {...props}
+      unoptimized
+      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAbEAADAAMBAQAAAAAAAAAAAAABAgMABAURUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8Anz9voy1dCI2mectSE5ioFCqia+KCwJ8HzGMZPqJb1oPEf//Z"
+    />
+  ),
+});
 
 const viewportSizes = {
   xsViewport: {
