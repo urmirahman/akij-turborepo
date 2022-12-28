@@ -30,10 +30,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install --frozen-lockfile
       - name: Build
         working-directory: ./apps/server
-        run: yarn build
+        run: npm run build
       - name: Test
         working-directory: ./apps/server
-        run: yarn test
+        run: npm run test
