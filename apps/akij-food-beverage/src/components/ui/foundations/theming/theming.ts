@@ -6,8 +6,6 @@ import type { Property } from 'csstype'
 import type { ButtonTheme } from '../../elements/Button'
 import type { HeadingTheme } from '../../elements/Heading'
 import type { PriceTheme } from '../../elements/Price'
-import type { FormBaseFieldTheme } from '../../elements/FormBaseField';
-import type { FormInputTheme } from '../../elements/FormInput';
 import type { LinkTheme } from '../../elements/Link';
 
 import { borders } from '../borders';
@@ -75,10 +73,6 @@ export type ExtendedTheme = {
     },
     elements: {
         button: ButtonTheme
-        form: {
-            base: FormBaseFieldTheme
-            input: FormInputTheme
-        }
         heading: HeadingTheme
         link: LinkTheme
         price?: PriceTheme
