@@ -1,35 +1,14 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/bash
+# Prevents force-pushing to master
 
-protected_branch="^(master|main|develop)"
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PUSH_COMMAND=`ps -ocommand= -p $PPID`
+PROTECTED_BRANCHES="^(master|main|develop|release-*|patch-*)"
+FORCE_PUSH="force|delete|-f"
 
-policy='[Policy] Never force push or delete the '$protected_branch' branch! (Prevented with pre-push hook.)'
-
-current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-
-push_command=$(ps -ocommand= -p $PPID)
-
-is_destructive='force|delete|\-f'
-
-will_remove_protected_branch=':'$protected_branch
-
-do_exit(){
-  echo $policy
+if [[ "$BRANCH" =~ $PROTECTED_BRANCHES && "$PUSH_COMMAND" =~ $FORCE_PUSH ]]; then
+  echo "Prevented force-push to protected branch \"$BRANCH\" by pre-push hook"
   exit 1
-}
-
-if [[ $push_command =~ $is_destructive ]] && [ [$current_branch = $protected_branch] ]; then
-  do_exit
 fi
-
-if [[ $push_command =~ $is_destructive ]] && [[ $push_command =~ $protected_branch ]]; then
-  do_exit
-fi
-
-if [[ $push_command =~ $will_remove_protected_branch ]]; then
-  do_exit
-fi
-
-unset do_exit
 
 exit 0
