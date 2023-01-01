@@ -74,3 +74,4 @@ Learn more about the power of Turborepo:
 
 ## How to kill ports on
 `sudo kill -9`sudo lsof -t -i:4000``
+- akij test
