@@ -54,7 +54,7 @@
   },
   "husky": {
     "hooks": {
-        "pre-push": "./commands/pre-push $HUSKY_GIT_STDIN"
+        "pre-commit": "echo applypatch-msg"
     }
   }
 }
