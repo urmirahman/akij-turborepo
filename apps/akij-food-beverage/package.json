@@ -97,5 +97,10 @@
   },
   "ct3aMetadata": {
     "initVersion": "6.11.3"
+  },
+  "husky": {
+    "hooks": {
+        "pre-push": "./commands/pre-push $HUSKY_GIT_STDIN"
+    }
   }
 }
