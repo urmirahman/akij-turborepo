@@ -3,20 +3,25 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "storybook-static/**"],
+      "outputs": [
+        "dist/**", 
+        ".next/**", 
+        "storybook-static/**"
+      ],
       "env": [
         "NODE_ENV", "VERCEL_URL", "PORT", "VERCEL", "ALLOW_ROBOTS", "CURRENT_DOMAIN"
       ]
     },
     "test": {
       "dependsOn": [
-        "^build"
+        "lint", "^build"
       ],
       "outputs": [
         "coverage/**"
       ]
     },
     "lint": {
+      "dependsOn": [],
       "outputs": []
     },
     "dev": {
