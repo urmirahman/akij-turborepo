@@ -14,7 +14,6 @@
     "prepare": "husky install",
     "test": "CI=true turbo run test",
     "cypress": "cypress open",
-    "prepush": "./scripts/pre-push-check.sh",
     "plop": "plop"
   },
   "devDependencies": {
@@ -50,11 +49,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-        "pre-commit": "echo applypatch-msg"
     }
   }
 }
