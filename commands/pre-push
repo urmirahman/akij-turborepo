@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo -e "===\n>> Akij Pre-push Hook: Checking branch name / আকিজ প্রি-পুশ হুক: শাখার নাম পরীক্ষা করা হচ্ছে..."
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PROTECTED_BRANCHES="^(master|main|develop)"
+
+if [[ $1 != *"$BRANCH"* ]]
+then
+  echo -e "\n🚫 You must use (git push origin $BRANCH) / আপনাকে অবশ্যই ব্যবহার করতে হবে (গিট পুশ অরিজিন $BRANCH).\n" && exit 1
+fi
+
+if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
+thenYou must use (git push origin $BRANCH)
+  echo -e "\n🚫 Cannot push to remote $BRANCH branch, please create your own branch and use PR."
+  echo -e "🚫 দূরবর্তী $BRANCH শাখায় ঠেলে দেওয়া যাবে না, অনুগ্রহ করে আপনার নিজস্ব শাখা তৈরি করুন এবং PR ব্যবহার করুন।.\n" && exit 1
+fi
+
+echo -e ">> Finish checking branch name / শাখার নাম পরীক্ষা করা শেষ করুন.\n==="
+
+exit 0
