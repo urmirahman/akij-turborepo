@@ -4,7 +4,7 @@
 set -e
 
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-echo "$branch"
+echo $branch
 
 if [ "$branch" == "develop" ]
 then
