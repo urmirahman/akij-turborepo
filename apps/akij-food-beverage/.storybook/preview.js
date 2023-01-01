@@ -8,6 +8,7 @@ import { FormatImageUrlProvider } from '../src/components/ui/contexts'
 import { breakpoints } from '../src/components/ui/foundations/breakpoints'
 import { grid } from '../src/components/ui/foundations/grid'
 import { themes } from '../src/components/ui/foundations/theming'
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 
 const OriginalNextImage = NextImage.default;
 
@@ -64,6 +65,9 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: { disable: true },
   layout: 'centered',
+  nextRouter: {
+    Provider: RouterContext.Provider,
+  },
   controls: {
     expanded: true,
     matchers: {
