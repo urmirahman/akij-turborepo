@@ -13,6 +13,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",
     "test": "CI=true turbo run test",
+    "cypress": "cypress open",
     "plop": "plop"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.2.4",
     "commitizen": "^4.2.6",
+    "cypress": "^12.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.16.7",
     "esbuild-jest": "^0.5.0",
