@@ -30,4 +30,9 @@ jobs:
         run: npm install --frozen-lockfile
       - run: npm run build
       - run: npm run lint
-      - run: npm run test
+      - name: Test
+        run: npm run test
+        env:
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: malarivnat
+          TURBO_REMOTE_ONLY: "true"
