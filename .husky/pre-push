@@ -9,7 +9,7 @@ FORCE_PUSH="force|delete|-f"
 echo $BRANCH
 
 if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]; then
-  echo "Prevented force-push to protected branch \"$BRANCH\" by pre-push hook"
+  echo "চু \"$BRANCH\" এ ধাক্কা দিতে পারে না, একটি শক্ত চড়!!তুমি আমার নিগ"
   exit 1
 fi
 
