@@ -5,9 +5,6 @@
  */
 //!process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-//const withTM = require('next-transpile-modules')(['ky']);
-
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
@@ -28,5 +25,5 @@ const config = {
     ]
   }
 };
-//export default withTM(config);
+
 export default config;

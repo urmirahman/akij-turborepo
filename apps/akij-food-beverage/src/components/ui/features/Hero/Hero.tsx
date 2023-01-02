@@ -2,7 +2,6 @@ import { ThemedContainer } from "../../elements/ThemedContainer";
 import type { ContextlessImageProps } from "../../elements/Image";
 import type { ThemeName } from "../../foundations/theming";
 import { Styled } from "./Hero.styled";
-import Image from "next/image";
 import Ingredients from "./Ingredients/Ingredients";
 import { Heading } from "../../elements/Heading";
 import Animations from "./Animations/Animations";
@@ -20,7 +19,7 @@ function RenderHero({ theme, headingLine, image, ingredients }: HeroProps) {
     <Styled.Hero data-testid="Hero">
       <div className="bg-gray-50 px-6 py-12 text-center text-gray-800 md:px-12 lg:text-left">
         <div className="container mx-auto xl:px-32">
-          <div className="relative flex grid items-center gap-12 lg:grid-cols-2">
+          <div className="relative items-center gap-12 lg:grid-cols-2">
             <div className="mt-12 flex flex-col items-center justify-center lg:mt-0">
               <Heading tag="span" variant="h1BigBoldSerif">
                 {headingLine}
@@ -31,7 +30,7 @@ function RenderHero({ theme, headingLine, image, ingredients }: HeroProps) {
               <Products />
             </div>
             <div className="mt-12 flex flex-col items-center justify-center lg:mt-0">
-              <Animations />
+              <Animations image={image} />
             </div>
           </div>
         </div>
