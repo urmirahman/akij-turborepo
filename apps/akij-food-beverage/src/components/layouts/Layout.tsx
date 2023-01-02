@@ -1,26 +1,21 @@
-import type { ReactNode } from "react";
-import { ThemedContainer } from "../ui/elements/ThemedContainer";
-import type { ThemeName } from "../ui/foundations/theming";
+import type { ReactNode } from 'react'
+import { ThemedContainer } from '../ui/elements/ThemedContainer'
+import type { ThemeName } from '../ui/foundations/theming'
 
 type LayoutProps = {
-  theme?: ThemeName;
-  header?: ReactNode;
-  footer?: ReactNode;
-  h1?: string;
-  children: ReactNode;
+  theme?: ThemeName
+  header?: ReactNode
+  footer?: ReactNode
+  h1?: string
+  children: ReactNode
   chat?: {
-    url: string;
-    isOpen: boolean;
-    handleClose: () => void;
-  };
-};
+    url: string
+    isOpen: boolean
+    handleClose: () => void
+  }
+}
 
-export function Layout({
-  theme = "white-brown",
-  header,
-  children,
-  footer,
-}: LayoutProps) {
+export function Layout({ theme = 'primary-brown', header, children, footer }: LayoutProps) {
   return (
     <>
       <ThemedContainer theme={theme}>
@@ -31,5 +26,5 @@ export function Layout({
         {footer}
       </ThemedContainer>
     </>
-  );
+  )
 }
