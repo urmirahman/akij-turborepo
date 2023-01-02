@@ -5,7 +5,7 @@ import { Button } from "./Button";
 
 describe("akij-foods-button test", () => {
   it("sees akij-foods-button", () => {
-    render(<Button />);
+    render(<Button variant={"primary"}>{"Akij"}</Button>);
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
 });

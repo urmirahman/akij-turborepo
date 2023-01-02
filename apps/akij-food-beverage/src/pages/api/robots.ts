@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { ALLOW_ROBOTS } from '../../utils/robots'
+import { ALLOW_ROBOTS } from 'ui/components/utils/robots'
 
 const CURRENT_DOMAIN = process.env.CURRENT_DOMAIN ?? ''
 

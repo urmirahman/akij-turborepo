@@ -1,5 +1,4 @@
 function toRgbValues(hexCode: string) {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return hexCode
         .match(/[0-9abcdef]{2}/gi)!
         .map((d) => +`0x${d}`)

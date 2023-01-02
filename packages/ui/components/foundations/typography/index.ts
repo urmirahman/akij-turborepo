@@ -39,11 +39,10 @@ export type CustomTypography = {
 
 /* Custom added typography variants. */
 declare module '@mui/material/styles' {
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
     interface TypographyVariants extends CustomTypography {
         fontWeightBlack: Property.FontWeight
     }
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
+
     interface TypographyVariantsOptions extends Partial<CustomTypography> {
         fontWeightBlack?: Property.FontWeight
     }

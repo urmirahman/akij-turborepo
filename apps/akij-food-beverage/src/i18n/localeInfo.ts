@@ -1,4 +1,4 @@
-import type { IconName } from '../components/ui/elements/Icon'
+import type { IconName } from 'ui/components//elements/Icon'
 
 export type LocaleInfo = {
     countryCode: string

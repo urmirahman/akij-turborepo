@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import { splitAspectRatio } from "../../../../utils/splitAspectRatio";
+import { splitAspectRatio } from "../../utils/splitAspectRatio";
 import type { ImageProps } from "./Image";
 
 const Image = styled.img<Pick<ImageProps, "aspectRatio">>`

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { uuidv4 } from '../../../../utils/uuid'
+import { uuidv4 } from '../../utils/uuid'
 
 /** This needs to only run client-side so the unique id doesn't mismatch between the client and server renders. */
 export function useTitleId(title: string | undefined) {

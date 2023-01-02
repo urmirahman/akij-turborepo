@@ -1,4 +1,4 @@
-import type { AspectRatio } from '../types/AspectRatio'
+import type { AspectRatio } from '../../types/AspectRatio'
 
 import { calculateImageHeight } from './calculateImageHeight'
 

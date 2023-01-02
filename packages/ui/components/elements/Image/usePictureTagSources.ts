@@ -5,7 +5,7 @@ import type { Breakpoint } from '../../foundations/breakpoints';
 import { orderedBreakpoints, smallestBreakpoint } from '../../foundations/breakpoints'
 import type { Theme } from '../../foundations/theming';
 import { useTheme } from '../../foundations/theming'
-import { getSpanVwCalcForGivenValues } from '../../../../utils/getSpanVwCalc'
+import { getSpanVwCalcForGivenValues } from '../../utils/getSpanVwCalc'
 import type { ImageProps } from './Image';
 import { isSizesImageSource } from './Image'
 

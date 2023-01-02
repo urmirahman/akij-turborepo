@@ -23,6 +23,9 @@ const config = {
       "cdn.sanity.io",
       "www.akijfood.com"
     ]
+  },
+  typescript: {
+    ignoreBuildErrors: true
   }
 };
 

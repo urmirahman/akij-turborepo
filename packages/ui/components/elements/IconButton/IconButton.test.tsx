@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { expect } from "@jest/globals";
-import { wrapper } from "../../../../testing";
+import { wrapper } from "../../testing";
 import type { IconButtonProps } from "./IconButton";
 import { IconButton } from "./IconButton";
 

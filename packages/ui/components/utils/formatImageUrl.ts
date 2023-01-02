@@ -1,10 +1,9 @@
-import type { ImageMediaParams } from '../components/ui/contexts'
+import type { ImageMediaParams } from '../contexts'
 
 import { calculateImageHeight } from './calculateImageHeight'
 
 export function formatImageUrl(imageUrl: string, params: ImageMediaParams) {
     const [path, query] = imageUrl.split('?')
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const url = new URL(path!)
     let search = query ? `${query}&` : ''
     search += new URLSearchParams(buildSearchParams(params)).toString()

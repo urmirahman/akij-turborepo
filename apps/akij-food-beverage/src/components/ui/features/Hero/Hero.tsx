@@ -1,18 +1,18 @@
-import { ThemedContainer } from "../../elements/ThemedContainer";
-import type { ContextlessImageProps } from "../../elements/Image";
-import type { ThemeName } from "../../foundations/theming";
-import { Styled } from "./Hero.styled";
-import Ingredients from "./Ingredients/Ingredients";
-import { Heading } from "../../elements/Heading";
-import Animations from "./Animations/Animations";
-import Products from "./Products/Products";
+import { ThemedContainer } from 'ui/components/elements/ThemedContainer'
+import type { ContextlessImageProps } from 'ui/components/elements/Image'
+import type { ThemeName } from 'ui/components/foundations/theming'
+import { Styled } from './Hero.styled'
+import Ingredients from './Ingredients/Ingredients'
+import { Heading } from 'ui/components/elements/Heading'
+import Animations from './Animations/Animations'
+import Products from './Products/Products'
 
 export type HeroProps = {
-  theme?: ThemeName;
-  headingLine: string;
-  image: ContextlessImageProps;
-  ingredients: boolean;
-};
+  theme?: ThemeName
+  headingLine: string
+  image: ContextlessImageProps
+  ingredients: boolean
+}
 
 function RenderHero({ theme, headingLine, image, ingredients }: HeroProps) {
   return (
@@ -36,19 +36,19 @@ function RenderHero({ theme, headingLine, image, ingredients }: HeroProps) {
         </div>
       </div>
     </Styled.Hero>
-  );
+  )
 }
 
 export function Hero({ theme, ...props }: HeroProps) {
-  const render = <RenderHero theme={theme} {...props} />;
+  const render = <RenderHero theme={theme} {...props} />
 
   if (theme) {
     return (
       <ThemedContainer tag="section" theme={theme}>
         {render}
       </ThemedContainer>
-    );
+    )
   }
 
-  return render;
+  return render
 }

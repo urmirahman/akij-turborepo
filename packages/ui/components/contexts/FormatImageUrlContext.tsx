@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-import type { AspectRatio } from "../../../types/AspectRatio";
+import type { AspectRatio } from "../../types/AspectRatio";
 
 export type ImageMediaParams = {
   /**

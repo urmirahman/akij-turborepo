@@ -23,8 +23,8 @@
       "~/i18n": ["src/i18n"],
       "~/services/*": ["src/services/*"],
       "~/ui/*": ["src/ui/*"],
-      "~/utils": ["src/utils"],
-      "~/utils/*": ["src/utils/*"]
+      "~/utils": ["../../packages/ui/components/utils"],
+      "~/utils/*": ["../../packages/ui/components/utils/*"]
     },
     "typeRoots": ["./node_modules/@types", "./node_modules/@dynatrace/"]
   },

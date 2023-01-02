@@ -1,5 +1,5 @@
 import type { Breakpoint } from "../../foundations/breakpoints";
-import type { AspectRatio } from "../../../../types/AspectRatio";
+import type { AspectRatio } from "../../../types/AspectRatio";
 import type { TwelveColumnGridSpan } from "../GridColumn";
 import { Styled } from "./Image.styled";
 import { usePictureTagSources } from "./usePictureTagSources";

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
-import { ThemedContainer } from '../ui/elements/ThemedContainer'
-import type { ThemeName } from '../ui/foundations/theming'
+import { ThemedContainer } from 'ui/components/elements/ThemedContainer'
+import type { ThemeName } from 'ui/components/foundations/theming'
 
 type LayoutProps = {
   theme?: ThemeName
