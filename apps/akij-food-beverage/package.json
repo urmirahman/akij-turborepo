@@ -8,7 +8,11 @@
     "yarn": "Please use npm"
   },
   "scripts": {
+    "analyze": "cross-env ANALYZE=true next build",
     "build": "next build",
+    "clean": "npm run clean:layer0 && npm run clean:next && npm run clean:node",
+    "clean:next": "rimraf **/.next",
+    "clean:node": "rimraf **/node_modules",
     "dev": "next dev --port 3010",
     "postinstall": "prisma generate",
     "lint": "next lint",
@@ -19,6 +23,8 @@
     "cy:run": "cypress run --component",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
     "make-feat": "plop"
   },
   "dependencies": {
@@ -80,6 +86,7 @@
     "@typescript-eslint/parser": "^5.33.0",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.3.0",
+    "cross-env": "^7.0.3",
     "cypress": "^12.1.0",
     "cypress-axe": "^1.2.0",
     "dotenv": "^16.0.3",
