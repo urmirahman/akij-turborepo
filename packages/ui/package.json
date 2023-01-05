@@ -5,8 +5,8 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "TIMING=1 eslint \"**/*.ts*\"",
-    "test": "jest --coverage"
+    "test": "jest",
+    "test-cov": "jest --coverage"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
