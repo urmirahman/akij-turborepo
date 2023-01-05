@@ -8,4 +8,9 @@ export const HeroMock: HeroProps = {
     href: 'https://www.akijfood.com/public/assets/img/logo.png',
   },
   ingredients: true,
+  products: [
+    {
+      _id: 1,
+    },
+  ],
 }
