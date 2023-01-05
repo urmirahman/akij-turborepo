@@ -13,7 +13,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "husky:commit-msg": "commitlint",
     "prepare": "husky install",
-    "test": "CI=true turbo run test",
+    "test": "turbo run test",
     "cypress": "cypress open",
     "plop": "plop"
   },
