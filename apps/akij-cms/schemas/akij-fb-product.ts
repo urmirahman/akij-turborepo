@@ -1,26 +1,31 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-    name: 'product',
-    title: 'Product',
+    name: 'products',
+    title: 'Products',
     type: 'document',
     fields: [
         defineField({
+            name: 'name',
+            title: 'Name',
+            type: 'string'
+        }),
+        defineField({
+            name: 'price',
+            title: 'Price',
+            type: 'number'
+        }),
+        defineField({
             name: 'image',
             title: 'Image',
-            type: 'array',
-            of: [{ type: 'image' }],
+            type: 'image',
             options: {
-                imageHotspot: {
-                    imagePath: `featureImage`,
-                    descriptionPath: `details`,
-                    tooltip: undefined,
-                }
+                hotspot: true,
             }
         }),
         defineField({
-            name: 'name',
-            title: 'Name',
+            name: 'description',
+            title: 'Description',
             type: 'string'
         }),
         defineField({
@@ -33,14 +38,29 @@ export default defineType({
             }
         }),
         defineField({
-            name: 'price',
-            title: 'Price',
+            name: 'brand',
+            title: 'Brand',
+            type: 'string'
+        }),
+        defineField({
+            name: 'category',
+            title: 'Category',
+            type: 'string'
+        }),
+        defineField({
+            name: 'rating',
+            title: 'Rating',
             type: 'number'
         }),
         defineField({
-            name: 'description',
-            title: 'Description',
-            type: 'string'
+            name: 'numReviews',
+            title: 'NumReviews',
+            type: 'number'
+        }),
+        defineField({
+            name: 'countInStock',
+            title: 'CountInStock',
+            type: 'number'
         }),
     ]
 })

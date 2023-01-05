@@ -9,7 +9,7 @@
         "storybook-static/**"
       ],
       "env": [
-        "NODE_ENV", "VERCEL_URL", "PORT", "VERCEL", "ALLOW_ROBOTS", "CURRENT_DOMAIN"
+        "NODE_ENV", "VERCEL_URL", "PORT", "VERCEL", "ALLOW_ROBOTS", "CURRENT_DOMAIN", "NEXT_PUBLIC_SANITY_DATASET", "NEXT_PUBLIC_SANITY_PROJECT_ID"
       ]
     },
     "test": {

@@ -33,3 +33,16 @@ export type AddressSuggestion = {
     state?: string
     zipCode: string
 }
+
+export type CmsProducts = {
+    name: string
+    price: number
+    image: string
+    description: string
+    slug: string
+    brand: string
+    category: string
+    rating: number
+    numReviews: number
+    countInStock: number
+}

@@ -4,7 +4,6 @@ import type { ThemeName } from 'ui/components/foundations/theming'
 import { Styled } from './Hero.styled'
 import Ingredients from './Ingredients/Ingredients'
 import { Heading } from 'ui/components/elements/Heading'
-import Animations from './Animations/Animations'
 import Products from './Products/Products'
 
 export type HeroProps = {
@@ -26,11 +25,8 @@ function RenderHero({ theme, headingLine, image, ingredients }: HeroProps) {
               </Heading>
               {ingredients && <Ingredients />}
             </div>
-            <div className="absolute ml-[300px] flex flex-col items-center justify-center lg:mt-0">
+            <div className="pt-5">
               <Products />
-            </div>
-            <div className="mt-12 flex flex-col items-center justify-center lg:mt-0">
-              <Animations image={image} />
             </div>
           </div>
         </div>
