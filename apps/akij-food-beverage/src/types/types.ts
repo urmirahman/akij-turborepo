@@ -35,6 +35,7 @@ export type AddressSuggestion = {
 }
 
 export type CmsProducts = {
+    _id: string
     name: string
     price: number
     image: string

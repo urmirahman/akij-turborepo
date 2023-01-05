@@ -1,6 +1,5 @@
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import Link from 'next/link'
-import React from 'react'
 import { urlForThumbnail } from '../../../../../utils/imageProcess'
 import type { CmsProducts } from '~/types/types'
 
