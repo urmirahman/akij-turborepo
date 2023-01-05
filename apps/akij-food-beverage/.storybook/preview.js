@@ -6,7 +6,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { FormatImageUrlProvider } from 'ui/components/contexts'
 
 import { breakpoints } from 'ui/components/foundations/breakpoints'
-import { grid } from 'ui/componentsfoundations/grid'
+import { grid } from 'ui/components/foundations/grid'
 import { themes } from 'ui/components/foundations/theming'
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 
