@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 import type { Theme } from "../../foundations/theming";
-import { optionalStyle } from "../../../../utils/optionalStyle";
+import { optionalStyle } from "../../utils/optionalStyle";
 import type { PlayButtonProps } from "./PlayButton";
 
 function getStateStyles(theme: Theme) {

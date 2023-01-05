@@ -3,11 +3,11 @@ import * as NextImage from "next/image"
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { FormatImageUrlProvider } from '../src/components/ui/contexts'
+import { FormatImageUrlProvider } from 'ui/components/contexts'
 
-import { breakpoints } from '../src/components/ui/foundations/breakpoints'
-import { grid } from '../src/components/ui/foundations/grid'
-import { themes } from '../src/components/ui/foundations/theming'
+import { breakpoints } from 'ui/components/foundations/breakpoints'
+import { grid } from 'ui/componentsfoundations/grid'
+import { themes } from 'ui/components/foundations/theming'
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 
 const OriginalNextImage = NextImage.default;
