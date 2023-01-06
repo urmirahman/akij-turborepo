@@ -15,7 +15,7 @@ const Products = ({ products, error, loading }: any) => {
       ) : (
         <Grid container spacing={3}>
           <Typography>
-            Mohian Dipta
+            mohian dipta
           </Typography>
           {products.map((product: CmsProducts[]) => (
             <Grid item md={4} key={product._id}>
