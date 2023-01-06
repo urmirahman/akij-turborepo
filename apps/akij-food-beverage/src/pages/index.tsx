@@ -14,14 +14,7 @@ const Home = () => {
       </Head>
       <Layout header={<Header />} h1={'Akij Header'} footer={<Footer />}>
         <main className="min-h-screen bg-gradient-to-b">
-          <Hero
-            headingLine={'Hero section'}
-            image={{
-              href: 'https://www.akijfood.com/public/assets/img/logo.png',
-              alt: 'Akij',
-            }}
-            ingredients={true}
-          />
+          <Hero headingLine={'Hero section'} ingredients={true} />
         </main>
       </Layout>
     </>

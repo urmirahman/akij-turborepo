@@ -5,15 +5,35 @@ import { Styled } from './Hero.styled'
 import Ingredients from './Ingredients/Ingredients'
 import { Heading } from 'ui/components/elements/Heading'
 import Products from './Products/Products'
+import { useEffect, useState } from 'react'
+import { fetchProducts } from '../../../../utils/fetchProducts'
 
 export type HeroProps = {
   theme?: ThemeName
   headingLine: string
-  image: ContextlessImageProps
   ingredients: boolean
 }
 
-function RenderHero({ theme, headingLine, image, ingredients }: HeroProps) {
+function RenderHero({ theme, headingLine, ingredients }: HeroProps) {
+  const [state, setState] = useState({
+    products: [],
+    error: '',
+    loading: true,
+  })
+  const { loading, error, products } = state
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const products = await fetchProducts()
+        setState({ products, loading: false, error: '' })
+      } catch (e) {
+        setState({ products, loading: false, error: e.message })
+      }
+    }
+    fetchData()
+  }, [])
+
   return (
     <Styled.Hero data-testid="Hero">
       <div className="bg-gray-50 px-6 py-12 text-center text-gray-800 md:px-12 lg:text-left">
@@ -26,7 +46,7 @@ function RenderHero({ theme, headingLine, image, ingredients }: HeroProps) {
               {ingredients && <Ingredients />}
             </div>
             <div className="pt-5">
-              <Products />
+              <Products products={products} error={error} loading={loading} />
             </div>
           </div>
         </div>
