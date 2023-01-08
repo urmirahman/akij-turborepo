@@ -11,7 +11,7 @@ type StyledHeadingProps = TypographyProps &
 
 const Heading = styled(Typography)<StyledHeadingProps>(
   ({ theme }) => css`
-    color: ${baseTheme.colors.primary.blue};
+    color: ${baseTheme.colors.primary.green};
     hyphens: auto;
   `
 );
