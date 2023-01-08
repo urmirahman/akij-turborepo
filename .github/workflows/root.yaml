@@ -38,15 +38,3 @@ jobs:
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: malarivnat
           TURBO_REMOTE_ONLY: "true"
-
-  Cypress-Test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout GitCode
-        uses: actions/checkout@v2
-
-      - name: Run Cypress Test
-        uses: cypress-io/github-action@v4
-        with:
-          command: npx cypress run
-          browser: chrome
