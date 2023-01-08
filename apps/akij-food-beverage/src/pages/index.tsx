@@ -14,7 +14,7 @@ const Home = () => {
       </Head>
       <Layout header={<Header />} h1={'Akij Header'} footer={<Footer />}>
         <main className="min-h-screen bg-gradient-to-b">
-          <Hero headingLine={'Hero section'} ingredients={true} />
+          <Hero headingLine={'Tanvir'} ingredients={true} />
         </main>
       </Layout>
     </>
