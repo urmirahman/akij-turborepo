@@ -15,7 +15,6 @@ jobs:
 
       - name: Run Cypress Test
         uses: cypress-io/github-action@v4
-        working-directory: ./apps/akij-food-beverage
         with:
           command: npx cypress run
           browser: chrome
