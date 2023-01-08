@@ -14,9 +14,7 @@ const Products = ({ products, error, loading }: any) => {
         <Alert variant="standard">{error}</Alert>
       ) : (
         <Grid container spacing={3}>
-          <Typography>
-            mohian dipta
-          </Typography>
+          <Typography>Tanvir Alam</Typography>
           {products.map((product: CmsProducts[]) => (
             <Grid item md={4} key={product._id}>
               <ProductItem product={product} />
