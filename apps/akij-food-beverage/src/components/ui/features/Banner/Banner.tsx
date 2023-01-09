@@ -10,7 +10,7 @@ const Banner = () => {
     error: '',
     loading: true,
   })
-  const { products } = state
+  const { products, loading, error } = state
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +35,7 @@ const Banner = () => {
           actionBtnOne="Buy Now"
           actionBtnTwo="See more products"
         />
-        {products[0] && <ProductImage src={urlForThumbnail(products[0].image as string)} />}
+        {!loading && <ProductImage src={urlForThumbnail(products[0].image as string)} alt="Houston" />}
       </div>
     </div>
   )

@@ -11,7 +11,7 @@
     @apply container mx-auto max-w-screen-xl bg-white py-24 text-black;
   }
   .Box {
-    @apply flex flex-col justify-center  px-6 md:justify-start;
+    @apply flex flex-col justify-center  gap-y-10 px-6 md:justify-start;
   }
   .highlightedGreenText {
     @apply font-medium uppercase text-green-500;
@@ -22,7 +22,6 @@
   .primaryBtn {
     @apply rounded-full bg-green-500 py-4 px-6 font-bold capitalize text-white hover:bg-green-700;
   }
-
   .outlineBtn {
     @apply rounded-full border border-green-500 py-4 px-6 text-center text-green-700  transition duration-300 hover:shadow-md hover:shadow-green-300;
   }

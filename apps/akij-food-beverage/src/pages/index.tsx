@@ -15,7 +15,6 @@ const Home = () => {
       </Head>
       <Layout header={<Header />} h1={'Akij Header'} footer={<Footer />}>
         <main className="min-h-screen bg-gradient-to-b">
-          {/* banner will be deleted after completion of task */}
           <Hero headingLine={'Tanvir'} ingredients={true} />
           <Banner />
         </main>

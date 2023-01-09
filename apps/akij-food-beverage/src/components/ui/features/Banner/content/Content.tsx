@@ -13,9 +13,9 @@ const Content = ({ title, actionTitle, description, actionBtnOne, actionBtnTwo }
   return (
     <div className="Box">
       <p className="highlightedGreenText">{actionTitle}</p>
-      <h1 className="mt-5">{title}</h1>
-      <p className="mt-5 text-lg ">{description}</p>
-      <div className="mt-5 flex flex-col gap-5 md:flex-row">
+      <h1 className="">{title}</h1>
+      <p className="">{description}</p>
+      <div className=" flex flex-col gap-5 md:flex-row">
         <Button text={actionBtnOne} classname="primaryBtn" />
         <Button text={actionBtnTwo} classname="outlineBtn" />
       </div>
