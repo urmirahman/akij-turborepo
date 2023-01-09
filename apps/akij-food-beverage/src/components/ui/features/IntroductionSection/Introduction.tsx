@@ -4,9 +4,6 @@ import CheckmarkIcon from "ui/components/elements/Icon/checkmark";
 import { fetchProducts } from '../../../../utils/fetchProducts';
 import { urlForThumbnail } from './../../../../utils/imageProcess'
 const Introduction = () => {
-  // type product ={
-
-  // }
   const [state, setState] = useState({})
     useEffect(() => {
         const fetchData = async () => {
@@ -19,7 +16,6 @@ const Introduction = () => {
         }
         fetchData()
       }, [])
-      console.log(state);
 return (
     <div className="customContainer gridTwo">
         <div className='my-16 mx-auto px-8'>
@@ -51,7 +47,7 @@ return (
           <button className="mt-4 outlineBtn">Buy Now</button> 
         </div>
     </div>
-  )
+    )
 }
 export default Introduction;
 
