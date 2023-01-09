@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  h1 {
+    @apply text-3xl  font-bold sm:text-4xl md:text-5xl;
+  }
+}
+@layer components {
+  .customContainer {
+    @apply container mx-auto max-w-screen-xl bg-white py-24 text-black;
+  }
+  .Box {
+    @apply flex flex-col justify-center  px-6 md:justify-start;
+  }
+  .highlightedGreenText {
+    @apply font-medium uppercase text-green-500;
+  }
+  .gridTwo {
+    @apply grid grid-cols-1 lg:grid-cols-2;
+  }
+  .primaryBtn {
+    @apply rounded-full bg-green-500 py-4 px-6 font-bold capitalize text-white hover:bg-green-700;
+  }
+
+  .outlineBtn {
+    @apply rounded-full border border-green-500 py-4 px-6 text-center text-green-700  transition duration-300 hover:shadow-md hover:shadow-green-300;
+  }
+}

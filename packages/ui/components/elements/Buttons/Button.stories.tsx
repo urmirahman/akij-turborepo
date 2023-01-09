@@ -12,3 +12,4 @@ export default {
 export const Primary: ComponentStory<typeof Button> = () => (
   <Button variant={"primary"}>{"Button"}</Button>
 );
+
