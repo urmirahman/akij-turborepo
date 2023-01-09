@@ -16,18 +16,14 @@ export default {
 const Template: Story<PartnerProps> = (props) => <Component {...props} />;
 
 export const Default = Template.bind({});
-Default.args = {
-    ...PartnerMock,
+Default.args = {};
+
+export const WithoutTitle = Template.bind({});
+WithoutTitle.args = {
+    title: PartnerMock.title,
 };
 
-export const WithProduct = Template.bind({});
-WithProduct.args = {
-    title: undefined,
-};
-
-export const WithoutProduct = Template.bind({});
-WithoutProduct.args = {
-    ...PartnerMock,
-    theme: undefined,
-    subTitle: undefined,
+export const WithoutSubTitle = Template.bind({});
+WithoutSubTitle.args = {
+    subTitle: PartnerMock.subTitle,
 };
