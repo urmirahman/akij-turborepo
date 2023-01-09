@@ -3,6 +3,7 @@ import { Layout } from '~/components/layouts'
 import { Footer } from '../components/ui/features/Footer'
 import { Header } from '../components/ui/features/Header'
 import { Hero } from '../components/ui/features/Hero'
+import { Partner } from '../components/ui/features/PartnerSection/Partner'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Layout header={<Header />} h1={'Akij Header'} footer={<Footer />}>
         <main className="min-h-screen bg-gradient-to-b">
           <Hero headingLine={'Tanvir'} ingredients={true} />
+          <Partner />
         </main>
       </Layout>
     </>
