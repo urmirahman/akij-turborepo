@@ -3,6 +3,7 @@ import { Layout } from '~/components/layouts'
 import { Footer } from '../components/ui/features/Footer'
 import { Header } from '../components/ui/features/Header'
 import { Hero } from '../components/ui/features/Hero'
+import IntroductionSection  from '~/components/ui/features/IntroductionSection/Introduction'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
           <Hero headingLine={'Tanvir'} ingredients={true} />
         </main>
       </Layout>
+      <IntroductionSection />
     </>
   )
 }
