@@ -1,8 +1,12 @@
+import { type } from 'os';
 import {useEffect, useState} from 'react'
 import CheckmarkIcon from "ui/components/elements/Icon/checkmark";
 import { fetchProducts } from '../../../../utils/fetchProducts';
 import { urlForThumbnail } from './../../../../utils/imageProcess'
 const Introduction = () => {
+  // type product ={
+
+  // }
   const [state, setState] = useState({})
     useEffect(() => {
         const fetchData = async () => {
@@ -15,12 +19,13 @@ const Introduction = () => {
         }
         fetchData()
       }, [])
+      console.log(state);
 return (
     <div className="customContainer gridTwo">
-        <div className='my-16 mx-auto'>
+        <div className='my-16 mx-auto px-8'>
            <img src={state.image && urlForThumbnail(state.image)} alt={state.name} height={400} width={300}/>
         </div>
-        <div className='my-24 mx-auto'>
+        <div className='my-24 mx-auto px-8'>
             <h2 className="text-4xl font-semibold"> Introducing Our Juicy <span className= "brand">{state.brand}</span></h2>
             <p className="description">{state.description}</p>
             <ul className="space-y-4 sm:space-y-2">
