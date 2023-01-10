@@ -16,8 +16,8 @@ const Content = ({ title, actionTitle, description, actionBtnOne, actionBtnTwo }
       <h1 className="">{title}</h1>
       <p className="">{description}</p>
       <div className=" flex flex-col gap-5 md:flex-row">
-        <Button text={actionBtnOne} classname="primaryBtn" />
-        <Button text={actionBtnTwo} classname="outlineBtn" />
+        <Button text={actionBtnOne} styleClass="primaryBtn" />
+        <Button text={actionBtnTwo} styleClass="outlineBtn" />
       </div>
     </div>
   )

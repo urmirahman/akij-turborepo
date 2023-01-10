@@ -8,6 +8,6 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>
 
-export const BuyNow: ComponentStory<typeof Button> = () => <Button classname="primaryBtn" text={'Buy Now'} />
+const BuyNow: ComponentStory<typeof Button> = () => <Button classname="primaryBtn" text={'Buy Now'} />
 
-export const SeeMore: ComponentStory<typeof Button> = () => <Button classname="outlineBtn" text={'See More'} />
+const SeeMore: ComponentStory<typeof Button> = () => <Button classname="outlineBtn" text={'See More'} />

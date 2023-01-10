@@ -2,11 +2,11 @@ import React from 'react'
 
 type Props = {
   text?: string
-  classname?: string
+  styleClass?: string
 }
 
-const Button = ({ text, classname }: Props) => {
-  return <button className={classname}>{text}</button>
+const Button = ({ text, styleClass }: Props) => {
+  return <button className={styleClass}>{text}</button>
 }
 
 export default Button

@@ -23,6 +23,6 @@
     @apply rounded-full bg-green-500 py-4 px-6 font-bold capitalize text-white hover:bg-green-700;
   }
   .outlineBtn {
-    @apply rounded-full border border-green-500 py-4 px-6 text-center text-green-700  transition duration-300 hover:shadow-md hover:shadow-green-300;
+    @apply rounded-full border border-green-500 py-4 px-6 text-center text-green-700 transition duration-300 hover:shadow-md hover:shadow-green-300;
   }
 }
