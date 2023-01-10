@@ -4,6 +4,7 @@ import Banner from '~/components/ui/features/Banner/Banner'
 import { Footer } from '../components/ui/features/Footer'
 import { Header } from '../components/ui/features/Header'
 import { Hero } from '../components/ui/features/Hero'
+import { Partner } from '../components/ui/features/PartnerSection/Partner'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <main className="min-h-screen bg-gradient-to-b">
           <Hero headingLine={'Tanvir'} ingredients={true} />
           <Banner />
+          <Partner />
         </main>
       </Layout>
     </>
