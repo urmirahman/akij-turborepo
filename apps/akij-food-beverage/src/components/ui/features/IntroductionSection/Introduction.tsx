@@ -1,46 +1,40 @@
-import { type } from 'os';
-import {useEffect, useState} from 'react'
 import CheckmarkIcon from "ui/components/elements/Icon/checkmark";
-import { fetchProducts } from '../../../../utils/fetchProducts';
-import { urlForThumbnail } from './../../../../utils/imageProcess'
+import { urlForThumbnail } from './../../../../utils/imageProcess';
+import { Alert, CircularProgress} from '@mui/material'
+import useFetch from "./useFetch";
 const Introduction = () => {
-  const [state, setState] = useState({})
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const products = await fetchProducts()
-            setState(products[0])
-          } catch (e) {
-            console.log(e)
-          }
-        }
-        fetchData()
-      }, [])
+  const {product,loading,error} = useFetch();
 return (
+<>
+  {loading ? (
+    <CircularProgress />
+    ) : error ? (
+       <Alert variant="standard">{error}</Alert>
+    ) : (
     <div className="customContainer gridTwo">
         <div className='my-16 mx-auto px-8'>
-           <img src={state.image && urlForThumbnail(state.image)} alt={state.name} height={400} width={300}/>
+           <img src={product.image && urlForThumbnail(product.image)} alt={product.name} height={400} width={300}/>
         </div>
         <div className='my-24 mx-auto px-8'>
-            <h2 className="text-4xl font-semibold"> Introducing Our Juicy <span className= "brand">{state.brand}</span></h2>
-            <p className="description">{state.description}</p>
+            <h2 className="text-4xl font-semibold"> Introducing Our Juicy <span className= "brand">{product.brand}</span></h2>
+            <p className="description">{product.description}</p>
             <ul className="space-y-4 sm:space-y-2">
                 <li className="space-y-2">
                    <div className="flex items-center space-x-2">
                       <CheckmarkIcon />
-                      <span>Review {state.numReviews}</span>
+                      <span>Review {product.numReviews}</span>
                    </div>
                 </li>
                 <li className="space-y-2">
                    <div className="flex items-center space-x-2">
                      <CheckmarkIcon />
-                     <span>Rating {state.rating}</span>
+                     <span>Rating {product.rating}</span>
                    </div>
                 </li>
                 <li className="space-y-2">
                    <div className="flex items-center space-x-2">
                      <CheckmarkIcon />
-                     <span>Price {state.price}</span>
+                     <span>Price {product.price}</span>
                     </div>
                 </li>
             </ul>
@@ -48,6 +42,9 @@ return (
         </div>
     </div>
     )
+  }
+</>
+ )
 }
 export default Introduction;
 
