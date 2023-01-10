@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer components {
     .customContainer {
-      @apply container mx-auto my-8 max-w-screen-xl bg-white text-black;
+      @apply container mx-auto max-w-screen-xl bg-white text-black;
     }
     .gridTwo {
       @apply grid grid-cols-1 lg:grid-cols-2;
@@ -19,5 +19,8 @@
     }
     .description{
         @apply my-8 leading-7 tracking-wide text-slate-700;
+    }
+    .customflex{
+        @apply flex items-center space-x-2;
     }
   }
