@@ -2,7 +2,7 @@ import CheckmarkIcon from "ui/components/elements/Icon/checkmark";
 import Arrow from "ui/components/elements/Icon/arrow";
 import { urlForThumbnail } from './../../../../utils/imageProcess';
 import { Alert, CircularProgress} from '@mui/material';
-import useFetch from "./useFetch";
+import useFetch from "../../../../utils/useFetch";
 const Introduction = () => {
   const {products,loading,error,currentIndex,nextProduct,prevProduct} = useFetch();
 return (
@@ -51,5 +51,7 @@ return (
 </>
  )
 }
+
 export default Introduction;
+
 

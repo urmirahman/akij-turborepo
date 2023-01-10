@@ -3,7 +3,7 @@ import { Layout } from '~/components/layouts'
 import { Footer } from '../components/ui/features/Footer'
 import { Header } from '../components/ui/features/Header'
 import { Hero } from '../components/ui/features/Hero'
-import IntroductionSection  from '~/components/ui/features/IntroductionSection/Introduction'
+import IntroductionSection  from '~/components/ui/features/IntroductionSection'
 import { Partner } from '../components/ui/features/PartnerSection/Partner'
 
 const Home = () => {

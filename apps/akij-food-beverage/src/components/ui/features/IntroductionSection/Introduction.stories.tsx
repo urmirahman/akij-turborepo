@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-
 import Introductions from "./Introduction";
 
 export default {
