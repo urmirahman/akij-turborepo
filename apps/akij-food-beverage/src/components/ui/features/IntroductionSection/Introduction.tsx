@@ -42,7 +42,7 @@ return (
                     </div>
                 </li>
             </ul>
-          <button className="mt-4 outlineBtn">Buy Now</button> 
+          <button className="mt-4 buyBtn">Buy Now</button> 
           </div>
         </div>
     </div>
