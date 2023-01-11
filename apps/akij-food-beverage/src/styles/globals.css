@@ -1,13 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base {
-  h1 {
-    @apply text-3xl  font-bold sm:text-4xl md:text-5xl;
-  }
-}
-@layer components {
-  .customContainer {
+@layer components { 
+    .buyBtn {
+      @apply text-center text-blue-700 rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300 w-full sm:max-w-[240px] px-6 py-4 border border-[#0c66ee];
+    }
+    .brand{
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600;
+    }
+    .description{
+        @apply my-8 leading-7 tracking-wide text-slate-700;
+    }
+    .customflex{
+        @apply flex items-center space-x-2;
+    }
+   .customContainer {
     @apply container mx-auto max-w-screen-xl bg-white py-24 text-black;
   }
   .Box {
@@ -24,5 +31,11 @@
   }
   .outlineBtn {
     @apply rounded-full border border-green-500 py-4 px-6 text-center text-green-700 transition duration-300 hover:shadow-md hover:shadow-green-300;
+  }
+
+  }
+@layer base {
+  h1 {
+    @apply text-3xl  font-bold sm:text-4xl md:text-5xl;
   }
 }
